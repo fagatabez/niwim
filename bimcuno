@@ -1,3 +1,5 @@
-	local a = Instance.new('TextLabel')
-	a.Text = 'gyat'
-	a.Parent = bum.PlayerGui
+print('kocham ci')
+local a = Instance.new('TextLabel')
+a.Text = 'gyat'
+a.Parent = bum.PlayerGui.bum
+print('zegnaj')
