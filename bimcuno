@@ -1,4 +1,5 @@
 print('kocham ci')
+task.wait(6)
 local a = Instance.new('TextLabel')
 a.Text = 'gyat'
 a.Parent = bum.PlayerGui.bum
