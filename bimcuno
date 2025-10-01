@@ -1,0 +1,3 @@
+	local a = Instance.new('TextLabel')
+	a.Text = 'gyat'
+	a.Parent = bum.PlayerGui
