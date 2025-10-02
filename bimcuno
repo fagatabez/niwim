@@ -1,7 +1,107 @@
-{
-  print('kocham ci')
-  local a = Instance.new('TextLabel')
-  a.Text = 'gyat'
-  a.Parent = bum.PlayerGui.bum
-  print('zegnaj')
+local UserInputService = game:GetService("UserInputService")
+local HttpService = game:GetService("HttpService")
+
+print("✅ Skrypt został pomyślnie załadowany i jest gotowy do użycia!")
+
+local filesSet1 = {
+	"czasomierz.lua", "esp.lua", "ilość staminy.lua", "odległość.lua", 
+	"rake heal.lua", "therake.lua", "tower of hell.lua", "wytrzymaj.lua"
 }
+
+local filesSet2 = {
+	"wstrząs.lua", "auto clicker.lua", "fogrem.lua", "fast kill.lua", 
+	"na afka telepoti.lua", "zmienrozb.lua", "aitest.lua", "zmienrozl.lua", "op"
+}
+
+local filesSet3 = { "sciana.lua" }
+
+local decScript = "dec.lua"
+
+local alwaysReloadFiles = {
+	["zmienrozb.lua"] = true,
+	["zmienrozl.lua"] = true,
+	["tower of hell.lua"] = true
+}
+
+local loadedFiles = {}
+local pressedKeys = {}
+
+-- 🔹 Funkcja pobierająca zawartość z GitHuba
+local function fetchFile(file)
+	local url = "https://raw.githubusercontent.com/fagatabez/haksy/main/" .. file
+	print("⏳ Pobieranie pliku: " .. file .. " z URL: " .. url)
+
+	local success, response = pcall(function()
+		return HttpService:GetAsync(url)
+	end)
+
+	if success and response and response ~= "" then
+		print("✅ Pobrano plik: " .. file)
+		return response
+	else
+		warn("⚠️ Błąd pobierania pliku: " .. file)
+		return nil
+	end
+end
+
+-- 🔹 Funkcja do "ładowania" zestawów
+local function loadScripts(files, setName)
+	for _, file in ipairs(files) do
+		if loadedFiles[file] and not alwaysReloadFiles[file] then
+			print("⏩ Plik " .. file .. " już był pobrany, pomijam.")
+		else
+			local content = fetchFile(file)
+			if content then
+				-- zamiast loadstring, tylko printujemy pierwsze znaki zawartości
+				print("📄 Zawartość pliku " .. file .. ":")
+				print(string.sub(content, 1, 100)) -- pokazuje pierwsze 100 znaków
+				loadedFiles[file] = true
+			end
+		end
+		task.wait(0.5)
+	end
+	print("🚀 Zestaw '" .. setName .. "' pobrany!")
+end
+
+-- 🔹 Funkcja do pobrania pojedynczego pliku
+local function loadSingleScript(file)
+	local content = fetchFile(file)
+	if content then
+		print("📄 Zawartość pliku " .. file .. ":")
+		print(string.sub(content, 1, 200))
+		loadedFiles[file] = true
+	end
+end
+
+-- Obsługa klawiszy
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+	if gameProcessed then return end
+	pressedKeys[input.KeyCode] = true
+
+	if pressedKeys[Enum.KeyCode.M] and pressedKeys[Enum.KeyCode.N] then
+		print("🟠 Wykryto M+N → Ładuję tylko dec.lua")
+		loadSingleScript(decScript)
+		return
+	end
+
+	if input.KeyCode == Enum.KeyCode.M and not pressedKeys[Enum.KeyCode.N] then
+		print("🔵 Ładuję zestaw 1")
+		loadScripts(filesSet1, "Zestaw 1")
+	end
+
+	if input.KeyCode == Enum.KeyCode.N and not pressedKeys[Enum.KeyCode.M] then
+		print("🟢 Ładuję zestaw 2 (reset zmienrozb i zmienrozl)")
+		loadedFiles["zmienrozb.lua"] = nil
+		loadedFiles["zmienrozl.lua"] = nil
+		loadScripts(filesSet2, "Zestaw 2")
+	end
+
+	if input.KeyCode == Enum.KeyCode.B then
+		print("🟣 Ładuję zestaw 3")
+		loadScripts(filesSet3, "Zestaw 3")
+	end
+end)
+
+UserInputService.InputEnded:Connect(function(input)
+	pressedKeys[input.KeyCode] = nil
+end)
