@@ -1503,101 +1503,69 @@
 .method public R(J)J
     .locals 8
 
+    # ==========================================
+    # PRZEŁĄCZNIK (MOD SWITCH)
+    # const/4 v0, 0x1  <-- MOD WŁĄCZONY (Instant Level)
+    # const/4 v0, 0x0  <-- MOD WYŁĄCZONY (Normalna gra)
+    # ==========================================
+    const/4 v0, 0x1
+
+    if-eqz v0, :cond_mod_off
+
+    # --- JEŚLI MOD WŁĄCZONY ---
+    const-wide/16 v0, 0x1         # Wymagane tylko 1 XP do poziomu
+    return-wide v0
+
+    :cond_mod_off
+    # --- JEŚLI MOD WYŁĄCZONY (Oryginalny kod) ---
     const-wide/16 v0, 0x1
-
     sub-long/2addr p1, v0
-
     iget-object v2, p0, Lc2/c;->a:Lc2/k;
-
     invoke-virtual {v2}, Lc2/k;->n()J
-
     move-result-wide v2
-
     const-wide/16 v4, 0x4
-
     div-long/2addr v2, v4
-
     const-wide/16 v6, 0x1e
-
     sub-long/2addr v6, v2
-
     mul-long p1, p1, v6
-
     const-wide/16 v2, 0x28
-
     add-long/2addr p1, v2
-
     iget-object v2, p0, Lc2/c;->a:Lc2/k;
-
     invoke-virtual {v2}, Lc2/k;->n()J
-
     move-result-wide v2
-
     mul-long v2, v2, v4
-
     const-wide/16 v4, 0x64
-
     sub-long v2, v4, v2
-
     mul-long p1, p1, v2
-
     div-long/2addr p1, v4
-
     iget-object v2, p0, Lc2/c;->k0:Lb2/i;
-
     invoke-virtual {v2}, Lb2/i;->d()J
-
     move-result-wide v2
-
     sub-long/2addr v2, v0
-
     long-to-float v2, v2
-
     const/high16 v3, 0x42c80000    # 100.0f
-
     div-float/2addr v2, v3
-
     long-to-float p1, p1
-
     const/high16 p2, 0x3f800000    # 1.0f
-
     add-float/2addr v2, p2
-
     div-float/2addr p1, v2
-
     float-to-long v4, p1
-
     sget-object p1, LW1/b;->t:Lf2/i;
-
     iget-object p1, p1, Lf2/i;->x0:Lh2/b;
-
     invoke-virtual {p1}, Lh2/b;->H()I
-
     move-result p1
-
     int-to-float p1, p1
-
     div-float/2addr p1, v3
-
     long-to-float v2, v4
-
     add-float/2addr p1, p2
-
     div-float/2addr v2, p1
-
     float-to-long p1, v2
-
     const-wide/16 v2, 0x0
-
     cmp-long v4, p1, v2
-
     if-gtz v4, :cond_0
-
     goto :goto_0
-
     :cond_0
     move-wide v0, p1
-
     :goto_0
     return-wide v0
 .end method
@@ -3675,11 +3643,28 @@
 
     goto :goto_1
 
-    :cond_10
-    iget-object v3, v0, Lc2/c;->Y:Lb2/i;
+	:cond_10
+    const/4 v15, 0x1   # Ustaw na 0x1 dla turbo, 0x0 dla oryginału
 
+    if-nez v15, :normal_flow
+
+    # MOD ON:
+    iget-object v3, v0, Lc2/c;->Y:Lb2/i;
+    invoke-direct/range {p0 .. p0}, Lc2/c;->V()J
+    move-result-wide v8
+    invoke-virtual {v3, v8, v9}, Lb2/i;->c(J)V
+    const-wide/16 v11, 0x1
+    invoke-virtual {v3, v11, v12}, Lb2/i;->a(J)V
+    
+    # KLUCZOWE: Wymuszenie fizycznego zrzutu, jeśli czas >= cel
+    invoke-static {}, Lo2/b;->a()V 
+    goto :goto_mod_end
+
+    :normal_flow
+    iget-object v3, v0, Lc2/c;->Y:Lb2/i;
     invoke-virtual {v3, v1, v2}, Lb2/i;->a(J)V
 
+    :goto_mod_end
     sget-object v3, LW1/b;->t:Lf2/i;
 
     iget-object v3, v3, Lf2/i;->x:Lv2/l;
@@ -3793,10 +3778,12 @@
 
     invoke-static {}, Lo2/b;->a()V
 
-    :goto_6
-    iget-object v3, v0, Lc2/c;->y:Lb2/i;
-
-    invoke-virtual {v3, v1, v2}, Lb2/i;->a(J)V
+	:goto_6
+	iget-object v3, v0, Lc2/c;->y:Lb2/i;
+    
+    # Ustawiamy czas na np. 100 godzin (w milisekundach)
+    const-wide v4, 0x15752a00L 
+    invoke-virtual {v3, v4, v5}, Lb2/i;->c(J)V
 
     iget-object v1, v0, Lc2/c;->y:Lb2/i;
 
@@ -3946,9 +3933,19 @@
 
     invoke-static {}, Ld2/b;->i()V
 
+# --- POBRANIE BAZOWEJ NAGRODY ---
     invoke-static {p3, p4}, Lj2/a;->h(II)J
 
-    move-result-wide v3
+    # Musi być zaraz po invoke!
+    move-result-wide v3 
+
+    # --- NASZ MOD (Mnożymy bazę x10,000) ---
+    const-wide/16 v5, 0x2710
+    mul-long v3, v3, v5
+    # ---------------------------------------
+
+    sget-object p1, LW1/b;->v:Lc2/d;
+    # ... reszta kodu (gdzie gra sobie mnoży v3 dalej przez p1, v5 itd.) ...
 
     sget-object p1, LW1/b;->v:Lc2/d;
 
