@@ -1,0 +1,5408 @@
+.class public Lf2/u;
+.super Lq2/c;
+.source "SourceFile"
+
+
+# instance fields
+.field private final A:I
+
+.field private B:I
+
+.field public C:Lq2/p;
+
+.field private D:J
+
+.field private E:Z
+
+.field private final F:Lq2/a;
+
+.field private G:I
+
+.field private H:I
+
+.field private I:I
+
+.field private J:I
+
+.field private K:I
+
+.field private L:[[I
+
+.field private final M:I
+
+.field private final N:I
+
+.field private u:I
+
+.field private v:I
+
+.field private final w:I
+
+.field private final x:I
+
+.field private final y:I
+
+.field private final z:I
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 3
+
+    const/16 v0, 0x34
+
+    const/16 v1, 0x4e
+
+    const/16 v2, 0x1b
+
+    invoke-direct {p0, v2, v0, v1}, Lq2/c;-><init>(III)V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lf2/u;->u:I
+
+    const/4 v1, -0x1
+
+    iput v1, p0, Lf2/u;->v:I
+
+    iput v0, p0, Lf2/u;->w:I
+
+    const/4 v2, 0x1
+
+    iput v2, p0, Lf2/u;->x:I
+
+    const/4 v2, 0x2
+
+    iput v2, p0, Lf2/u;->y:I
+
+    const/4 v2, 0x3
+
+    iput v2, p0, Lf2/u;->z:I
+
+    const/4 v2, 0x4
+
+    iput v2, p0, Lf2/u;->A:I
+
+    iput v1, p0, Lf2/u;->B:I
+
+    const-wide/16 v1, 0x3
+
+    iput-wide v1, p0, Lf2/u;->D:J
+
+    iput-boolean v0, p0, Lf2/u;->E:Z
+
+    iput v0, p0, Lf2/u;->J:I
+
+    iput v0, p0, Lf2/u;->K:I
+
+    const/16 v0, 0x28
+
+    iput v0, p0, Lf2/u;->M:I
+
+    const/16 v0, 0x82
+
+    iput v0, p0, Lf2/u;->N:I
+
+    new-instance v0, Lq2/p;
+
+    invoke-direct {v0}, Lq2/p;-><init>()V
+
+    iput-object v0, p0, Lf2/u;->C:Lq2/p;
+
+    new-instance v0, Lq2/a;
+
+    invoke-direct {v0}, Lq2/a;-><init>()V
+
+    iput-object v0, p0, Lf2/u;->F:Lq2/a;
+
+    return-void
+.end method
+
+.method private s()I
+    .locals 5
+
+    sget-object v0, LW1/b;->s:Lc2/c;
+
+    iget-object v0, v0, Lc2/c;->b:Lc2/g;
+
+    invoke-virtual {v0}, Lc2/g;->r()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0xe
+
+    cmp-long v4, v0, v2
+
+    if-gez v4, :cond_0
+
+    const/4 v0, 0x2
+
+    return v0
+
+    :cond_0
+    sget-object v0, LW1/b;->s:Lc2/c;
+
+    iget-object v0, v0, Lc2/c;->b:Lc2/g;
+
+    invoke-virtual {v0}, Lc2/g;->r()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x27
+
+    cmp-long v4, v0, v2
+
+    if-gez v4, :cond_1
+
+    const/4 v0, 0x3
+
+    return v0
+
+    :cond_1
+    sget-object v0, LW1/b;->s:Lc2/c;
+
+    iget-object v0, v0, Lc2/c;->b:Lc2/g;
+
+    invoke-virtual {v0}, Lc2/g;->r()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x81
+
+    cmp-long v4, v0, v2
+
+    if-gez v4, :cond_2
+
+    const/4 v0, 0x4
+
+    return v0
+
+    :cond_2
+    const/4 v0, 0x5
+
+    return v0
+.end method
+
+.method private t()V
+    .locals 10
+
+    sget-object v0, LW1/b;->s:Lc2/c;
+
+    iget-object v0, v0, Lc2/c;->a:Lc2/k;
+
+    iget-object v0, v0, Lc2/k;->a:[[Lb2/i;
+
+    iget v1, p0, Lf2/u;->u:I
+
+    aget-object v0, v0, v1
+
+    array-length v0, v0
+
+    const/4 v2, 0x2
+
+    if-ne v1, v2, :cond_0
+
+    sget-object v1, LW1/b;->t:Lf2/i;
+
+    iget-object v1, v1, Lf2/i;->j:Lf2/u;
+
+    iget-object v1, v1, Lf2/u;->C:Lq2/p;
+
+    const/16 v3, 0x21
+
+    invoke-virtual {v1, v3}, Lq2/p;->j(I)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const/4 v0, 0x7
+
+    :cond_0
+    iget v1, p0, Lf2/u;->B:I
+
+    if-ge v1, v0, :cond_6
+
+    sget-object v0, LW1/b;->s:Lc2/c;
+
+    iget-object v0, v0, Lc2/c;->a:Lc2/k;
+
+    iget-object v0, v0, Lc2/k;->a:[[Lb2/i;
+
+    iget v3, p0, Lf2/u;->u:I
+
+    aget-object v0, v0, v3
+
+    aget-object v0, v0, v1
+
+    invoke-virtual {v0}, Lb2/i;->d()J
+
+    move-result-wide v0
+
+    sget-object v3, LW1/b;->s:Lc2/c;
+
+    iget-object v4, v3, Lc2/c;->a:Lc2/k;
+
+    iget-object v5, v4, Lc2/k;->b:[[I
+
+    iget v6, p0, Lf2/u;->u:I
+
+    aget-object v5, v5, v6
+
+    iget v7, p0, Lf2/u;->B:I
+
+    aget v5, v5, v7
+
+    int-to-long v8, v5
+
+    cmp-long v5, v0, v8
+
+    if-gez v5, :cond_6
+
+    const-wide/16 v0, 0x1
+
+    if-nez v6, :cond_1
+
+    iget-object v2, v3, Lc2/c;->j:Lb2/d;
+
+    invoke-virtual {v4, v7}, Lc2/k;->D(I)Lb2/d;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lb2/d;->C(Lb2/d;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    sget-object v2, LW1/b;->s:Lc2/c;
+
+    iget-object v2, v2, Lc2/c;->a:Lc2/k;
+
+    iget-object v2, v2, Lc2/k;->a:[[Lb2/i;
+
+    const/4 v3, 0x0
+
+    aget-object v2, v2, v3
+
+    iget v3, p0, Lf2/u;->B:I
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v2, v0, v1}, Lb2/i;->a(J)V
+
+    invoke-static {}, Ld2/b;->r()V
+
+    goto/16 :goto_1
+
+    :cond_1
+    const/4 v5, 0x1
+
+    if-ne v6, v5, :cond_4
+
+    iget-object v3, v3, Lc2/c;->m:Lb2/d;
+
+    invoke-virtual {v4, v7}, Lc2/k;->F(I)J
+
+    move-result-wide v6
+
+    invoke-virtual {v3, v6, v7}, Lb2/d;->B(J)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    sget-object v3, LW1/b;->s:Lc2/c;
+
+    iget-object v3, v3, Lc2/c;->a:Lc2/k;
+
+    iget-object v3, v3, Lc2/k;->a:[[Lb2/i;
+
+    aget-object v3, v3, v5
+
+    iget v4, p0, Lf2/u;->B:I
+
+    aget-object v3, v3, v4
+
+    invoke-virtual {v3, v0, v1}, Lb2/i;->a(J)V
+
+    iget v0, p0, Lf2/u;->B:I
+
+    if-ne v0, v2, :cond_2
+
+    sget-object v0, LW1/b;->s:Lc2/c;
+
+    iget-object v0, v0, Lc2/c;->b:Lc2/g;
+
+    invoke-virtual {v0}, Lc2/g;->z()V
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_3
+
+    sget-object v0, LW1/b;->v:Lc2/d;
+
+    iget-object v0, v0, Lc2/d;->b:Lc2/j;
+
+    invoke-virtual {v0}, Lc2/j;->h()V
+
+    :cond_3
+    :goto_0
+    invoke-static {}, Ld2/b;->f()V
+
+    goto :goto_1
+
+    :cond_4
+    if-ne v6, v2, :cond_5
+
+    iget-object v3, v3, Lc2/c;->k:Lb2/d;
+
+    invoke-virtual {v4, v7}, Lc2/k;->E(I)Lb2/d;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Lb2/d;->C(Lb2/d;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    sget-object v3, LW1/b;->s:Lc2/c;
+
+    iget-object v3, v3, Lc2/c;->a:Lc2/k;
+
+    iget-object v3, v3, Lc2/k;->a:[[Lb2/i;
+
+    aget-object v2, v3, v2
+
+    iget v3, p0, Lf2/u;->B:I
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v2, v0, v1}, Lb2/i;->a(J)V
+
+    goto :goto_1
+
+    :cond_5
+    const/4 v2, 0x4
+
+    if-ne v6, v2, :cond_6
+
+    iget-object v3, v3, Lc2/c;->B:Lb2/d;
+
+    invoke-virtual {v4, v7}, Lc2/k;->G(I)Lb2/d;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Lb2/d;->C(Lb2/d;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    sget-object v3, LW1/b;->s:Lc2/c;
+
+    iget-object v3, v3, Lc2/c;->a:Lc2/k;
+
+    iget-object v3, v3, Lc2/k;->a:[[Lb2/i;
+
+    aget-object v2, v3, v2
+
+    iget v3, p0, Lf2/u;->B:I
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v2, v0, v1}, Lb2/i;->a(J)V
+
+    invoke-static {}, Ld2/b;->x()V
+
+    :cond_6
+    :goto_1
+    return-void
+.end method
+
+.method private v()V
+    .locals 33
+
+    move-object/from16 v0, p0
+
+    iget v1, v0, Lf2/u;->u:I
+
+    const/4 v2, 0x0
+
+    if-gez v1, :cond_0
+
+    iput v2, v0, Lf2/u;->u:I
+
+    :cond_0
+    sget-object v1, LW1/b;->s:Lc2/c;
+
+    iget-object v1, v1, Lc2/c;->a:Lc2/k;
+
+    iget-object v1, v1, Lc2/k;->a:[[Lb2/i;
+
+    iget v3, v0, Lf2/u;->u:I
+
+    aget-object v1, v1, v3
+
+    array-length v1, v1
+
+    const/4 v4, 0x2
+
+    if-ne v3, v4, :cond_1
+
+    sget-object v3, LW1/b;->t:Lf2/i;
+
+    iget-object v3, v3, Lf2/i;->j:Lf2/u;
+
+    iget-object v3, v3, Lf2/u;->C:Lq2/p;
+
+    const/16 v5, 0x21
+
+    invoke-virtual {v3, v5}, Lq2/p;->j(I)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    const/4 v1, 0x7
+
+    :cond_1
+    const/4 v3, 0x0
+
+    :goto_0
+    const/high16 v5, 0x40000000    # 2.0f
+
+    const/4 v6, 0x4
+
+    const/4 v7, 0x1
+
+    if-ge v3, v1, :cond_12
+
+    rem-int/lit8 v8, v3, 0x2
+
+    if-nez v8, :cond_2
+
+    iget v8, v0, Lq2/c;->e:I
+
+    int-to-float v8, v8
+
+    iget v9, v0, Lq2/c;->f:I
+
+    iget v10, v0, Lq2/c;->i:I
+
+    add-int/2addr v9, v10
+
+    iget v10, v0, Lf2/u;->G:I
+
+    add-int/2addr v9, v10
+
+    iget v10, v0, Lf2/u;->H:I
+
+    mul-int v11, v10, v3
+
+    add-int/2addr v9, v11
+
+    int-to-float v9, v9
+
+    iget v11, v0, Lq2/c;->g:I
+
+    int-to-float v11, v11
+
+    int-to-float v10, v10
+
+    sget-object v12, Lq2/b;->V:Ln0/b;
+
+    invoke-static {v8, v9, v11, v10, v12}, Lq2/e;->Q(FFFFLn0/b;)V
+
+    iget v8, v0, Lq2/c;->e:I
+
+    int-to-float v8, v8
+
+    iget v9, v0, Lq2/c;->f:I
+
+    iget v10, v0, Lq2/c;->i:I
+
+    add-int/2addr v9, v10
+
+    iget v10, v0, Lf2/u;->G:I
+
+    add-int/2addr v9, v10
+
+    iget v10, v0, Lf2/u;->H:I
+
+    mul-int v11, v10, v3
+
+    add-int/2addr v9, v11
+
+    int-to-float v9, v9
+
+    int-to-float v11, v10
+
+    int-to-float v10, v10
+
+    sget-object v12, Lq2/b;->W:Ln0/b;
+
+    invoke-static {v8, v9, v11, v10, v12}, Lq2/e;->Q(FFFFLn0/b;)V
+
+    goto :goto_1
+
+    :cond_2
+    iget v8, v0, Lq2/c;->e:I
+
+    int-to-float v8, v8
+
+    iget v9, v0, Lq2/c;->f:I
+
+    iget v10, v0, Lq2/c;->i:I
+
+    add-int/2addr v9, v10
+
+    iget v10, v0, Lf2/u;->G:I
+
+    add-int/2addr v9, v10
+
+    iget v10, v0, Lf2/u;->H:I
+
+    mul-int v11, v10, v3
+
+    add-int/2addr v9, v11
+
+    int-to-float v9, v9
+
+    iget v11, v0, Lq2/c;->g:I
+
+    int-to-float v11, v11
+
+    int-to-float v10, v10
+
+    sget-object v12, Lq2/b;->X:Ln0/b;
+
+    invoke-static {v8, v9, v11, v10, v12}, Lq2/e;->Q(FFFFLn0/b;)V
+
+    iget v8, v0, Lq2/c;->e:I
+
+    int-to-float v8, v8
+
+    iget v9, v0, Lq2/c;->f:I
+
+    iget v10, v0, Lq2/c;->i:I
+
+    add-int/2addr v9, v10
+
+    iget v10, v0, Lf2/u;->G:I
+
+    add-int/2addr v9, v10
+
+    iget v10, v0, Lf2/u;->H:I
+
+    mul-int v11, v10, v3
+
+    add-int/2addr v9, v11
+
+    int-to-float v9, v9
+
+    int-to-float v11, v10
+
+    int-to-float v10, v10
+
+    sget-object v12, Lq2/b;->Y:Ln0/b;
+
+    invoke-static {v8, v9, v11, v10, v12}, Lq2/e;->Q(FFFFLn0/b;)V
+
+    :goto_1
+    iget v8, v0, Lf2/u;->u:I
+
+    const v9, 0x3e051eb8    # 0.13f
+
+    if-ne v8, v6, :cond_7
+
+    if-nez v3, :cond_3
+
+    iget v8, v0, Lq2/c;->e:I
+
+    int-to-float v11, v8
+
+    iget v8, v0, Lq2/c;->f:I
+
+    iget v10, v0, Lq2/c;->i:I
+
+    add-int/2addr v8, v10
+
+    iget v10, v0, Lf2/u;->G:I
+
+    add-int/2addr v8, v10
+
+    iget v10, v0, Lf2/u;->H:I
+
+    mul-int v12, v10, v3
+
+    add-int/2addr v8, v12
+
+    int-to-float v8, v8
+
+    int-to-float v12, v10
+
+    mul-float v12, v12, v9
+
+    sub-float v12, v8, v12
+
+    int-to-float v13, v10
+
+    int-to-float v14, v10
+
+    const v15, 0x3f266666    # 0.65f
+
+    const/16 v10, 0x45
+
+    invoke-static/range {v10 .. v15}, Lq2/e;->C(IFFFFF)V
+
+    goto/16 :goto_2
+
+    :cond_3
+    if-ne v3, v7, :cond_4
+
+    iget v8, v0, Lq2/c;->e:I
+
+    int-to-float v11, v8
+
+    iget v8, v0, Lq2/c;->f:I
+
+    iget v10, v0, Lq2/c;->i:I
+
+    add-int/2addr v8, v10
+
+    iget v10, v0, Lf2/u;->G:I
+
+    add-int/2addr v8, v10
+
+    iget v10, v0, Lf2/u;->H:I
+
+    mul-int v12, v10, v3
+
+    add-int/2addr v8, v12
+
+    int-to-float v8, v8
+
+    int-to-float v12, v10
+
+    mul-float v12, v12, v9
+
+    sub-float v12, v8, v12
+
+    int-to-float v13, v10
+
+    int-to-float v14, v10
+
+    const v15, 0x3f266666    # 0.65f
+
+    const/16 v10, 0x21
+
+    invoke-static/range {v10 .. v15}, Lq2/e;->C(IFFFFF)V
+
+    goto/16 :goto_2
+
+    :cond_4
+    if-ne v3, v4, :cond_5
+
+    iget v8, v0, Lq2/c;->e:I
+
+    int-to-float v11, v8
+
+    iget v8, v0, Lq2/c;->f:I
+
+    iget v10, v0, Lq2/c;->i:I
+
+    add-int/2addr v8, v10
+
+    iget v10, v0, Lf2/u;->G:I
+
+    add-int/2addr v8, v10
+
+    iget v10, v0, Lf2/u;->H:I
+
+    mul-int v12, v10, v3
+
+    add-int/2addr v8, v12
+
+    int-to-float v8, v8
+
+    int-to-float v12, v10
+
+    mul-float v12, v12, v9
+
+    sub-float v12, v8, v12
+
+    int-to-float v13, v10
+
+    int-to-float v14, v10
+
+    const v15, 0x3f0ccccd    # 0.55f
+
+    const/16 v10, 0x36
+
+    invoke-static/range {v10 .. v15}, Lq2/e;->C(IFFFFF)V
+
+    goto/16 :goto_2
+
+    :cond_5
+    const/4 v8, 0x3
+
+    if-ne v3, v8, :cond_6
+
+    iget v8, v0, Lq2/c;->e:I
+
+    int-to-float v11, v8
+
+    iget v8, v0, Lq2/c;->f:I
+
+    iget v10, v0, Lq2/c;->i:I
+
+    add-int/2addr v8, v10
+
+    iget v10, v0, Lf2/u;->G:I
+
+    add-int/2addr v8, v10
+
+    iget v10, v0, Lf2/u;->H:I
+
+    mul-int v12, v10, v3
+
+    add-int/2addr v8, v12
+
+    int-to-float v8, v8
+
+    int-to-float v12, v10
+
+    mul-float v12, v12, v9
+
+    sub-float v12, v8, v12
+
+    int-to-float v13, v10
+
+    int-to-float v14, v10
+
+    const v15, 0x3f0ccccd    # 0.55f
+
+    const/16 v10, 0x22
+
+    invoke-static/range {v10 .. v15}, Lq2/e;->C(IFFFFF)V
+
+    goto :goto_2
+
+    :cond_6
+    if-ne v3, v6, :cond_8
+
+    iget v8, v0, Lq2/c;->e:I
+
+    int-to-float v11, v8
+
+    iget v8, v0, Lq2/c;->f:I
+
+    iget v10, v0, Lq2/c;->i:I
+
+    add-int/2addr v8, v10
+
+    iget v10, v0, Lf2/u;->G:I
+
+    add-int/2addr v8, v10
+
+    iget v10, v0, Lf2/u;->H:I
+
+    mul-int v12, v10, v3
+
+    add-int/2addr v8, v12
+
+    int-to-float v8, v8
+
+    int-to-float v12, v10
+
+    mul-float v12, v12, v9
+
+    sub-float v12, v8, v12
+
+    int-to-float v13, v10
+
+    int-to-float v14, v10
+
+    const v15, 0x3f0ccccd    # 0.55f
+
+    const/16 v10, 0x1c
+
+    invoke-static/range {v10 .. v15}, Lq2/e;->C(IFFFFF)V
+
+    goto :goto_2
+
+    :cond_7
+    iget v10, v0, Lq2/c;->e:I
+
+    int-to-float v12, v10
+
+    iget v10, v0, Lq2/c;->f:I
+
+    iget v11, v0, Lq2/c;->i:I
+
+    add-int/2addr v10, v11
+
+    iget v11, v0, Lf2/u;->G:I
+
+    add-int/2addr v10, v11
+
+    iget v11, v0, Lf2/u;->H:I
+
+    mul-int v13, v11, v3
+
+    add-int/2addr v10, v13
+
+    int-to-float v10, v10
+
+    int-to-float v13, v11
+
+    mul-float v13, v13, v9
+
+    sub-float v13, v10, v13
+
+    int-to-float v14, v11
+
+    int-to-float v15, v11
+
+    mul-int/lit16 v9, v3, 0x80
+
+    mul-int/lit16 v8, v8, 0x80
+
+    const/16 v20, 0x0
+
+    const v21, 0x3f0ccccd    # 0.55f
+
+    const/16 v11, 0x8
+
+    const/16 v18, 0x80
+
+    const/16 v19, 0x80
+
+    move/from16 v16, v9
+
+    move/from16 v17, v8
+
+    invoke-static/range {v11 .. v21}, Lq2/e;->J(IFFFFIIIIFF)V
+
+    :cond_8
+    :goto_2
+    sget-object v8, LW1/b;->s:Lc2/c;
+
+    iget-object v8, v8, Lc2/c;->a:Lc2/k;
+
+    iget-object v8, v8, Lc2/k;->a:[[Lb2/i;
+
+    iget v9, v0, Lf2/u;->u:I
+
+    aget-object v8, v8, v9
+
+    aget-object v8, v8, v3
+
+    invoke-virtual {v8}, Lb2/i;->d()J
+
+    move-result-wide v8
+
+    sget-object v10, LW1/b;->s:Lc2/c;
+
+    iget-object v11, v10, Lc2/c;->a:Lc2/k;
+
+    iget-object v12, v11, Lc2/k;->b:[[I
+
+    iget v13, v0, Lf2/u;->u:I
+
+    aget-object v12, v12, v13
+
+    aget v12, v12, v3
+
+    int-to-long v14, v12
+
+    cmp-long v12, v8, v14
+
+    if-ltz v12, :cond_9
+
+    const/4 v8, 0x1
+
+    goto :goto_3
+
+    :cond_9
+    const/4 v8, 0x0
+
+    :goto_3
+    if-nez v13, :cond_a
+
+    invoke-virtual {v11, v3}, Lc2/k;->D(I)Lb2/d;
+
+    move-result-object v6
+
+    sget-object v7, LW1/b;->s:Lc2/c;
+
+    iget-object v7, v7, Lc2/c;->j:Lb2/d;
+
+    invoke-virtual {v6, v7}, Lb2/d;->k(Lb2/d;)Z
+
+    move-result v6
+
+    goto :goto_4
+
+    :cond_a
+    if-ne v13, v7, :cond_b
+
+    iget-object v6, v10, Lc2/c;->m:Lb2/d;
+
+    invoke-virtual {v11, v3}, Lc2/k;->F(I)J
+
+    move-result-wide v9
+
+    invoke-virtual {v6, v9, v10}, Lb2/d;->l(J)Z
+
+    move-result v6
+
+    xor-int/2addr v6, v7
+
+    goto :goto_4
+
+    :cond_b
+    if-ne v13, v4, :cond_c
+
+    invoke-virtual {v11, v3}, Lc2/k;->E(I)Lb2/d;
+
+    move-result-object v6
+
+    sget-object v7, LW1/b;->s:Lc2/c;
+
+    iget-object v7, v7, Lc2/c;->k:Lb2/d;
+
+    invoke-virtual {v6, v7}, Lb2/d;->k(Lb2/d;)Z
+
+    move-result v6
+
+    goto :goto_4
+
+    :cond_c
+    if-ne v13, v6, :cond_d
+
+    invoke-virtual {v11, v3}, Lc2/k;->G(I)Lb2/d;
+
+    move-result-object v6
+
+    sget-object v7, LW1/b;->s:Lc2/c;
+
+    iget-object v7, v7, Lc2/c;->B:Lb2/d;
+
+    invoke-virtual {v6, v7}, Lb2/d;->k(Lb2/d;)Z
+
+    move-result v6
+
+    goto :goto_4
+
+    :cond_d
+    const/4 v6, 0x0
+
+    :goto_4
+    if-eqz v8, :cond_e
+
+    sget-object v6, Lq2/b;->s:Ln0/b;
+
+    sget-object v7, Lq2/b;->t:Ln0/b;
+
+    goto :goto_7
+
+    :cond_e
+    if-eqz v6, :cond_f
+
+    sget-object v6, Lq2/b;->d:Ln0/b;
+
+    sget-object v7, Lq2/b;->e:Ln0/b;
+
+    goto :goto_7
+
+    :cond_f
+    iget v6, v0, Lf2/u;->B:I
+
+    if-ne v6, v3, :cond_10
+
+    sget-object v7, Lq2/b;->u:Ln0/b;
+
+    goto :goto_5
+
+    :cond_10
+    sget-object v7, Lq2/b;->s:Ln0/b;
+
+    :goto_5
+    if-ne v6, v3, :cond_11
+
+    sget-object v6, Lq2/b;->v:Ln0/b;
+
+    goto :goto_6
+
+    :cond_11
+    sget-object v6, Lq2/b;->t:Ln0/b;
+
+    :goto_6
+    move-object/from16 v32, v7
+
+    move-object v7, v6
+
+    move-object/from16 v6, v32
+
+    :goto_7
+    iget v8, v0, Lq2/c;->e:I
+
+    iget v9, v0, Lq2/c;->g:I
+
+    add-int/2addr v8, v9
+
+    iget v9, v0, Lf2/u;->I:I
+
+    sub-int/2addr v8, v9
+
+    int-to-float v8, v8
+
+    iget v10, v0, Lq2/c;->f:I
+
+    iget v11, v0, Lq2/c;->i:I
+
+    add-int/2addr v10, v11
+
+    iget v11, v0, Lf2/u;->G:I
+
+    add-int/2addr v10, v11
+
+    iget v11, v0, Lf2/u;->H:I
+
+    mul-int v12, v11, v3
+
+    add-int/2addr v10, v12
+
+    int-to-float v10, v10
+
+    int-to-float v9, v9
+
+    int-to-float v11, v11
+
+    invoke-static {v8, v10, v9, v11, v6}, Lq2/e;->Q(FFFFLn0/b;)V
+
+    iget v6, v0, Lq2/c;->e:I
+
+    iget v8, v0, Lq2/c;->g:I
+
+    add-int/2addr v6, v8
+
+    iget v8, v0, Lf2/u;->I:I
+
+    sub-int/2addr v6, v8
+
+    int-to-float v6, v6
+
+    iget v9, v0, Lq2/c;->f:I
+
+    iget v10, v0, Lq2/c;->i:I
+
+    add-int/2addr v9, v10
+
+    iget v10, v0, Lf2/u;->G:I
+
+    add-int/2addr v9, v10
+
+    iget v10, v0, Lf2/u;->H:I
+
+    mul-int v11, v10, v3
+
+    add-int/2addr v9, v11
+
+    int-to-float v9, v9
+
+    int-to-float v8, v8
+
+    int-to-float v10, v10
+
+    div-float/2addr v10, v5
+
+    invoke-static {v6, v9, v8, v10, v7}, Lq2/e;->Q(FFFFLn0/b;)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto/16 :goto_0
+
+    :cond_12
+    const/4 v3, 0x0
+
+    :goto_8
+    const/16 v8, 0x28
+
+    if-ge v3, v4, :cond_19
+
+    if-nez v3, :cond_13
+
+    iget v9, v0, Lf2/u;->H:I
+
+    int-to-float v9, v9
+
+    const/high16 v10, 0x42480000    # 50.0f
+
+    div-float/2addr v9, v10
+
+    invoke-static {v9}, Lq2/e;->h0(F)V
+
+    goto :goto_9
+
+    :cond_13
+    invoke-static {}, Lq2/e;->g0()V
+
+    :goto_9
+    const/4 v9, 0x0
+
+    :goto_a
+    if-ge v9, v1, :cond_18
+
+    sget-object v10, LW1/b;->s:Lc2/c;
+
+    iget-object v10, v10, Lc2/c;->a:Lc2/k;
+
+    iget-object v10, v10, Lc2/k;->a:[[Lb2/i;
+
+    iget v11, v0, Lf2/u;->u:I
+
+    aget-object v10, v10, v11
+
+    aget-object v10, v10, v9
+
+    invoke-virtual {v10}, Lb2/i;->d()J
+
+    move-result-wide v10
+
+    sget-object v12, LW1/b;->s:Lc2/c;
+
+    iget-object v12, v12, Lc2/c;->a:Lc2/k;
+
+    iget-object v12, v12, Lc2/k;->b:[[I
+
+    iget v13, v0, Lf2/u;->u:I
+
+    aget-object v12, v12, v13
+
+    aget v12, v12, v9
+
+    int-to-long v14, v12
+
+    cmp-long v12, v10, v14
+
+    if-gez v12, :cond_17
+
+    const v10, 0x3ea3d70a    # 0.32f
+
+    const v11, 0x3eb851ec    # 0.36f
+
+    if-nez v13, :cond_14
+
+    iget v12, v0, Lq2/c;->e:I
+
+    iget v14, v0, Lq2/c;->g:I
+
+    add-int/2addr v12, v14
+
+    int-to-float v12, v12
+
+    iget v14, v0, Lf2/u;->I:I
+
+    int-to-float v14, v14
+
+    const v15, 0x3f1eb852    # 0.62f
+
+    mul-float v14, v14, v15
+
+    sub-float/2addr v12, v14
+
+    iget-object v14, v0, Lf2/u;->L:[[I
+
+    aget-object v13, v14, v13
+
+    aget v13, v13, v9
+
+    int-to-float v13, v13
+
+    div-float/2addr v13, v5
+
+    sub-float/2addr v12, v13
+
+    iget v13, v0, Lq2/c;->f:I
+
+    iget v14, v0, Lq2/c;->i:I
+
+    add-int/2addr v13, v14
+
+    iget v14, v0, Lf2/u;->G:I
+
+    add-int/2addr v13, v14
+
+    iget v14, v0, Lf2/u;->H:I
+
+    mul-int v15, v14, v9
+
+    add-int/2addr v13, v15
+
+    int-to-float v13, v13
+
+    int-to-float v15, v14
+
+    mul-float v15, v15, v10
+
+    add-float/2addr v13, v15
+
+    int-to-float v10, v14
+
+    mul-float v10, v10, v11
+
+    int-to-float v14, v14
+
+    mul-float v14, v14, v11
+
+    const/16 v11, 0x19
+
+    invoke-static {v11, v12, v13, v10, v14}, Lq2/e;->B(IFFFF)V
+
+    goto/16 :goto_b
+
+    :cond_14
+    const v12, 0x3f23d70a    # 0.64f
+
+    if-ne v13, v7, :cond_15
+
+    iget v14, v0, Lq2/c;->e:I
+
+    iget v15, v0, Lq2/c;->g:I
+
+    add-int/2addr v14, v15
+
+    int-to-float v14, v14
+
+    iget v15, v0, Lf2/u;->I:I
+
+    int-to-float v15, v15
+
+    mul-float v15, v15, v12
+
+    sub-float/2addr v14, v15
+
+    iget-object v12, v0, Lf2/u;->L:[[I
+
+    aget-object v12, v12, v13
+
+    aget v12, v12, v9
+
+    int-to-float v12, v12
+
+    div-float/2addr v12, v5
+
+    sub-float/2addr v14, v12
+
+    iget v12, v0, Lq2/c;->f:I
+
+    iget v13, v0, Lq2/c;->i:I
+
+    add-int/2addr v12, v13
+
+    iget v13, v0, Lf2/u;->G:I
+
+    add-int/2addr v12, v13
+
+    iget v13, v0, Lf2/u;->H:I
+
+    mul-int v15, v13, v9
+
+    add-int/2addr v12, v15
+
+    int-to-float v12, v12
+
+    int-to-float v15, v13
+
+    mul-float v15, v15, v10
+
+    add-float/2addr v12, v15
+
+    int-to-float v10, v13
+
+    mul-float v10, v10, v11
+
+    int-to-float v13, v13
+
+    mul-float v13, v13, v11
+
+    const/16 v11, 0x14
+
+    invoke-static {v11, v14, v12, v10, v13}, Lq2/e;->B(IFFFF)V
+
+    goto :goto_b
+
+    :cond_15
+    if-ne v13, v4, :cond_16
+
+    iget v14, v0, Lq2/c;->e:I
+
+    iget v15, v0, Lq2/c;->g:I
+
+    add-int/2addr v14, v15
+
+    int-to-float v14, v14
+
+    iget v15, v0, Lf2/u;->I:I
+
+    int-to-float v15, v15
+
+    mul-float v15, v15, v12
+
+    sub-float/2addr v14, v15
+
+    iget-object v12, v0, Lf2/u;->L:[[I
+
+    aget-object v12, v12, v13
+
+    aget v12, v12, v9
+
+    int-to-float v12, v12
+
+    div-float/2addr v12, v5
+
+    sub-float/2addr v14, v12
+
+    iget v12, v0, Lq2/c;->f:I
+
+    iget v13, v0, Lq2/c;->i:I
+
+    add-int/2addr v12, v13
+
+    iget v13, v0, Lf2/u;->G:I
+
+    add-int/2addr v12, v13
+
+    iget v13, v0, Lf2/u;->H:I
+
+    mul-int v15, v13, v9
+
+    add-int/2addr v12, v15
+
+    int-to-float v12, v12
+
+    int-to-float v15, v13
+
+    mul-float v15, v15, v10
+
+    add-float/2addr v12, v15
+
+    int-to-float v10, v13
+
+    mul-float v10, v10, v11
+
+    int-to-float v13, v13
+
+    mul-float v13, v13, v11
+
+    invoke-static {v8, v14, v12, v10, v13}, Lq2/e;->B(IFFFF)V
+
+    goto :goto_b
+
+    :cond_16
+    if-ne v13, v6, :cond_17
+
+    iget v14, v0, Lq2/c;->e:I
+
+    iget v15, v0, Lq2/c;->g:I
+
+    add-int/2addr v14, v15
+
+    int-to-float v14, v14
+
+    iget v15, v0, Lf2/u;->I:I
+
+    int-to-float v15, v15
+
+    mul-float v15, v15, v12
+
+    sub-float/2addr v14, v15
+
+    iget-object v12, v0, Lf2/u;->L:[[I
+
+    aget-object v12, v12, v13
+
+    aget v12, v12, v9
+
+    int-to-float v12, v12
+
+    div-float/2addr v12, v5
+
+    sub-float/2addr v14, v12
+
+    iget v12, v0, Lq2/c;->f:I
+
+    iget v13, v0, Lq2/c;->i:I
+
+    add-int/2addr v12, v13
+
+    iget v13, v0, Lf2/u;->G:I
+
+    add-int/2addr v12, v13
+
+    iget v13, v0, Lf2/u;->H:I
+
+    mul-int v15, v13, v9
+
+    add-int/2addr v12, v15
+
+    int-to-float v12, v12
+
+    int-to-float v15, v13
+
+    mul-float v15, v15, v10
+
+    add-float/2addr v12, v15
+
+    int-to-float v10, v13
+
+    mul-float v10, v10, v11
+
+    int-to-float v13, v13
+
+    mul-float v13, v13, v11
+
+    const/16 v11, 0x21
+
+    invoke-static {v11, v14, v12, v10, v13}, Lq2/e;->B(IFFFF)V
+
+    :cond_17
+    :goto_b
+    add-int/lit8 v9, v9, 0x1
+
+    goto/16 :goto_a
+
+    :cond_18
+    add-int/lit8 v3, v3, 0x1
+
+    goto/16 :goto_8
+
+    :cond_19
+    const/4 v3, 0x0
+
+    :goto_c
+    if-ge v3, v1, :cond_38
+
+    iget v5, v0, Lf2/u;->u:I
+
+    const v9, 0x3f451eb8    # 0.77f
+
+    const/16 v10, 0x64
+
+    const/high16 v11, 0x42c80000    # 100.0f
+
+    if-ne v5, v4, :cond_1f
+
+    sget-object v12, LW1/b;->s:Lc2/c;
+
+    iget-object v12, v12, Lc2/c;->a:Lc2/k;
+
+    iget-object v12, v12, Lc2/k;->a:[[Lb2/i;
+
+    aget-object v5, v12, v5
+
+    aget-object v5, v5, v3
+
+    invoke-virtual {v5}, Lb2/i;->d()J
+
+    move-result-wide v12
+
+    const-wide/16 v14, 0x64
+
+    cmp-long v5, v12, v14
+
+    if-ltz v5, :cond_1e
+
+    sget-object v5, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v5, Lc2/c;->a:Lc2/k;
+
+    iget-object v5, v5, Lc2/k;->a:[[Lb2/i;
+
+    iget v12, v0, Lf2/u;->u:I
+
+    aget-object v5, v5, v12
+
+    aget-object v5, v5, v3
+
+    invoke-virtual {v5}, Lb2/i;->d()J
+
+    move-result-wide v12
+
+    const-wide/16 v14, 0x64
+
+    cmp-long v5, v12, v14
+
+    if-nez v5, :cond_1a
+
+    sget-object v5, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v5, Lc2/c;->a:Lc2/k;
+
+    iget-object v5, v5, Lc2/k;->b:[[I
+
+    iget v12, v0, Lf2/u;->u:I
+
+    aget-object v5, v5, v12
+
+    aget v5, v5, v3
+
+    if-ne v5, v10, :cond_1a
+
+    goto/16 :goto_10
+
+    :cond_1a
+    if-eq v3, v6, :cond_1d
+
+    const/4 v5, 0x7
+
+    if-ne v3, v5, :cond_1b
+
+    goto :goto_f
+
+    :cond_1b
+    sget-object v5, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v5, Lc2/c;->a:Lc2/k;
+
+    iget-object v5, v5, Lc2/k;->a:[[Lb2/i;
+
+    iget v12, v0, Lf2/u;->u:I
+
+    aget-object v5, v5, v12
+
+    aget-object v5, v5, v3
+
+    invoke-virtual {v5}, Lb2/i;->d()J
+
+    move-result-wide v12
+
+    const-wide/16 v14, 0x2710
+
+    cmp-long v5, v12, v14
+
+    if-ltz v5, :cond_1c
+
+    sget-object v5, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v5, Lc2/c;->a:Lc2/k;
+
+    iget-object v5, v5, Lc2/k;->a:[[Lb2/i;
+
+    iget v12, v0, Lf2/u;->u:I
+
+    aget-object v5, v5, v12
+
+    aget-object v5, v5, v3
+
+    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v5
+
+    :goto_d
+    move-object/from16 v16, v5
+
+    goto :goto_e
+
+    :cond_1c
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v12, LW1/b;->s:Lc2/c;
+
+    iget-object v12, v12, Lc2/c;->a:Lc2/k;
+
+    iget-object v12, v12, Lc2/k;->a:[[Lb2/i;
+
+    iget v13, v0, Lf2/u;->u:I
+
+    aget-object v12, v12, v13
+
+    aget-object v12, v12, v3
+
+    invoke-virtual {v5, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v12, "/\u221e"
+
+    invoke-virtual {v5, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    goto :goto_d
+
+    :goto_e
+    iget v5, v0, Lf2/u;->H:I
+
+    int-to-float v12, v5
+
+    const/high16 v13, 0x3e800000    # 0.25f
+
+    mul-float v12, v12, v13
+
+    iget v13, v0, Lq2/c;->e:I
+
+    int-to-float v13, v13
+
+    iget v14, v0, Lq2/c;->f:I
+
+    iget v15, v0, Lq2/c;->i:I
+
+    add-int/2addr v14, v15
+
+    iget v15, v0, Lf2/u;->G:I
+
+    add-int/2addr v14, v15
+
+    mul-int v15, v5, v3
+
+    add-int/2addr v14, v15
+
+    int-to-float v14, v14
+
+    int-to-float v15, v5
+
+    mul-float v15, v15, v9
+
+    add-float/2addr v14, v15
+
+    int-to-float v15, v5
+
+    const v19, 0x3dcccccd    # 0.1f
+
+    const v20, 0x3dcccccd    # 0.1f
+
+    const/16 v17, 0x1
+
+    const v18, 0x3dcccccd    # 0.1f
+
+    invoke-static/range {v12 .. v20}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    goto/16 :goto_11
+
+    :cond_1d
+    :goto_f
+    iget v5, v0, Lf2/u;->H:I
+
+    mul-int/lit8 v12, v5, 0x19
+
+    int-to-float v12, v12
+
+    div-float v13, v12, v11
+
+    iget v12, v0, Lq2/c;->e:I
+
+    int-to-float v14, v12
+
+    iget v12, v0, Lq2/c;->f:I
+
+    iget v15, v0, Lq2/c;->i:I
+
+    add-int/2addr v12, v15
+
+    iget v15, v0, Lf2/u;->G:I
+
+    add-int/2addr v12, v15
+
+    mul-int v15, v5, v3
+
+    add-int/2addr v12, v15
+
+    int-to-float v12, v12
+
+    int-to-float v15, v5
+
+    mul-float v15, v15, v9
+
+    add-float/2addr v15, v12
+
+    int-to-float v5, v5
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v12, LW1/b;->s:Lc2/c;
+
+    iget-object v12, v12, Lc2/c;->a:Lc2/k;
+
+    iget-object v12, v12, Lc2/k;->a:[[Lb2/i;
+
+    iget v2, v0, Lf2/u;->u:I
+
+    aget-object v2, v12, v2
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, "/"
+
+    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v2, LW1/b;->s:Lc2/c;
+
+    iget-object v2, v2, Lc2/c;->a:Lc2/k;
+
+    iget-object v2, v2, Lc2/k;->b:[[I
+
+    iget v12, v0, Lf2/u;->u:I
+
+    aget-object v2, v2, v12
+
+    aget v2, v2, v3
+
+    invoke-virtual {v9, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v17
+
+    const v20, 0x3dcccccd    # 0.1f
+
+    const v21, 0x3dcccccd    # 0.1f
+
+    const/16 v18, 0x1
+
+    const v19, 0x3dcccccd    # 0.1f
+
+    move/from16 v16, v5
+
+    invoke-static/range {v13 .. v21}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    goto/16 :goto_11
+
+    :cond_1e
+    :goto_10
+    iget v2, v0, Lf2/u;->H:I
+
+    mul-int/lit8 v5, v2, 0x19
+
+    int-to-float v5, v5
+
+    div-float v12, v5, v11
+
+    iget v5, v0, Lq2/c;->e:I
+
+    int-to-float v13, v5
+
+    iget v5, v0, Lq2/c;->f:I
+
+    iget v14, v0, Lq2/c;->i:I
+
+    add-int/2addr v5, v14
+
+    iget v14, v0, Lf2/u;->G:I
+
+    add-int/2addr v5, v14
+
+    mul-int v14, v2, v3
+
+    add-int/2addr v5, v14
+
+    int-to-float v5, v5
+
+    int-to-float v14, v2
+
+    mul-float v14, v14, v9
+
+    add-float/2addr v14, v5
+
+    int-to-float v15, v2
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v5, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v5, Lc2/c;->a:Lc2/k;
+
+    iget-object v5, v5, Lc2/k;->a:[[Lb2/i;
+
+    iget v9, v0, Lf2/u;->u:I
+
+    aget-object v5, v5, v9
+
+    aget-object v5, v5, v3
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v5, "/100"
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v16
+
+    const v19, 0x3dcccccd    # 0.1f
+
+    const v20, 0x3dcccccd    # 0.1f
+
+    const/16 v17, 0x1
+
+    const v18, 0x3dcccccd    # 0.1f
+
+    invoke-static/range {v12 .. v20}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    goto :goto_11
+
+    :cond_1f
+    iget v2, v0, Lf2/u;->H:I
+
+    mul-int/lit8 v5, v2, 0x19
+
+    int-to-float v5, v5
+
+    div-float v12, v5, v11
+
+    iget v5, v0, Lq2/c;->e:I
+
+    int-to-float v13, v5
+
+    iget v5, v0, Lq2/c;->f:I
+
+    iget v14, v0, Lq2/c;->i:I
+
+    add-int/2addr v5, v14
+
+    iget v14, v0, Lf2/u;->G:I
+
+    add-int/2addr v5, v14
+
+    mul-int v14, v2, v3
+
+    add-int/2addr v5, v14
+
+    int-to-float v5, v5
+
+    int-to-float v14, v2
+
+    mul-float v14, v14, v9
+
+    add-float/2addr v14, v5
+
+    int-to-float v15, v2
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v5, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v5, Lc2/c;->a:Lc2/k;
+
+    iget-object v5, v5, Lc2/k;->a:[[Lb2/i;
+
+    iget v9, v0, Lf2/u;->u:I
+
+    aget-object v5, v5, v9
+
+    aget-object v5, v5, v3
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v5, "/"
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v5, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v5, Lc2/c;->a:Lc2/k;
+
+    iget-object v5, v5, Lc2/k;->b:[[I
+
+    iget v9, v0, Lf2/u;->u:I
+
+    aget-object v5, v5, v9
+
+    aget v5, v5, v3
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v16
+
+    const v19, 0x3dcccccd    # 0.1f
+
+    const v20, 0x3dcccccd    # 0.1f
+
+    const/16 v17, 0x1
+
+    const v18, 0x3dcccccd    # 0.1f
+
+    invoke-static/range {v12 .. v20}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    :goto_11
+    sget v2, Lq2/m;->b:I
+
+    sget v5, Lq2/m;->e:I
+
+    const v9, 0x3e8a3d71    # 0.27f
+
+    if-eq v2, v5, :cond_23
+
+    sget v2, Lq2/m;->b:I
+
+    sget v5, Lq2/m;->g:I
+
+    if-ne v2, v5, :cond_20
+
+    goto :goto_15
+
+    :cond_20
+    sget v2, Lq2/m;->b:I
+
+    sget v5, Lq2/m;->i:I
+
+    if-eq v2, v5, :cond_22
+
+    sget v2, Lq2/m;->b:I
+
+    sget v5, Lq2/m;->j:I
+
+    if-ne v2, v5, :cond_21
+
+    goto :goto_13
+
+    :cond_21
+    iget v2, v0, Lf2/u;->H:I
+
+    int-to-float v2, v2
+
+    mul-float v2, v2, v9
+
+    :goto_12
+    move v12, v2
+
+    goto :goto_16
+
+    :cond_22
+    :goto_13
+    iget v2, v0, Lf2/u;->H:I
+
+    int-to-float v2, v2
+
+    const v5, 0x3e75c28f    # 0.24f
+
+    :goto_14
+    mul-float v2, v2, v5
+
+    goto :goto_12
+
+    :cond_23
+    :goto_15
+    iget v2, v0, Lf2/u;->H:I
+
+    int-to-float v2, v2
+
+    const v5, 0x3e851eb8    # 0.26f
+
+    goto :goto_14
+
+    :goto_16
+    iget v2, v0, Lq2/c;->e:I
+
+    int-to-float v2, v2
+
+    iget v5, v0, Lf2/u;->H:I
+
+    int-to-float v13, v5
+
+    const v21, 0x3f8ccccd    # 1.1f
+
+    mul-float v13, v13, v21
+
+    add-float/2addr v13, v2
+
+    iget v2, v0, Lq2/c;->f:I
+
+    iget v14, v0, Lq2/c;->i:I
+
+    add-int/2addr v2, v14
+
+    iget v14, v0, Lf2/u;->G:I
+
+    add-int/2addr v2, v14
+
+    mul-int v14, v5, v3
+
+    add-int/2addr v2, v14
+
+    int-to-float v2, v2
+
+    int-to-float v5, v5
+
+    const v14, 0x3dcccccd    # 0.1f
+
+    mul-float v5, v5, v14
+
+    add-float v14, v2, v5
+
+    iget v2, v0, Lq2/c;->g:I
+
+    int-to-float v15, v2
+
+    sget-object v2, Lq2/j;->a:[[I
+
+    iget v5, v0, Lf2/u;->u:I
+
+    aget-object v2, v2, v5
+
+    aget v2, v2, v3
+
+    invoke-static {v2}, Lq2/m;->c(I)Ljava/lang/String;
+
+    move-result-object v16
+
+    const v19, 0x3dcccccd    # 0.1f
+
+    const v20, 0x3dcccccd    # 0.1f
+
+    const/16 v17, 0x8
+
+    const v18, 0x3dcccccd    # 0.1f
+
+    invoke-static/range {v12 .. v20}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    sget v2, Lq2/m;->b:I
+
+    sget v5, Lq2/m;->g:I
+
+    if-eq v2, v5, :cond_25
+
+    sget v2, Lq2/m;->b:I
+
+    sget v5, Lq2/m;->e:I
+
+    if-eq v2, v5, :cond_25
+
+    sget v2, Lq2/m;->b:I
+
+    sget v5, Lq2/m;->f:I
+
+    if-eq v2, v5, :cond_25
+
+    sget v2, Lq2/m;->b:I
+
+    sget v5, Lq2/m;->i:I
+
+    if-eq v2, v5, :cond_25
+
+    sget v2, Lq2/m;->b:I
+
+    sget v5, Lq2/m;->j:I
+
+    if-eq v2, v5, :cond_25
+
+    sget v2, Lq2/m;->b:I
+
+    sget v5, Lq2/m;->k:I
+
+    if-eq v2, v5, :cond_25
+
+    sget v2, Lq2/m;->b:I
+
+    sget v5, Lq2/m;->l:I
+
+    if-ne v2, v5, :cond_24
+
+    goto :goto_18
+
+    :cond_24
+    iget v2, v0, Lf2/u;->H:I
+
+    int-to-float v2, v2
+
+    const v5, 0x3e6b851f    # 0.23f
+
+    :goto_17
+    mul-float v2, v2, v5
+
+    goto :goto_19
+
+    :cond_25
+    :goto_18
+    iget v2, v0, Lf2/u;->H:I
+
+    int-to-float v2, v2
+
+    const v5, 0x3e6147ae    # 0.22f
+
+    goto :goto_17
+
+    :goto_19
+    iget v5, v0, Lq2/c;->e:I
+
+    int-to-float v5, v5
+
+    iget v12, v0, Lf2/u;->H:I
+
+    int-to-float v13, v12
+
+    mul-float v13, v13, v21
+
+    add-float/2addr v13, v5
+
+    iget v5, v0, Lq2/c;->f:I
+
+    iget v14, v0, Lq2/c;->i:I
+
+    add-int/2addr v5, v14
+
+    iget v14, v0, Lf2/u;->G:I
+
+    add-int/2addr v5, v14
+
+    mul-int v14, v12, v3
+
+    add-int/2addr v5, v14
+
+    int-to-float v5, v5
+
+    int-to-float v12, v12
+
+    const v22, 0x3ee66666    # 0.45f
+
+    mul-float v12, v12, v22
+
+    add-float v14, v5, v12
+
+    iget v5, v0, Lq2/c;->g:I
+
+    int-to-float v15, v5
+
+    sget-object v5, Lq2/j;->b:[[I
+
+    iget v12, v0, Lf2/u;->u:I
+
+    aget-object v5, v5, v12
+
+    aget v5, v5, v3
+
+    invoke-static {v5}, Lq2/m;->c(I)Ljava/lang/String;
+
+    move-result-object v16
+
+    const v19, 0x3e99999a    # 0.3f
+
+    const v20, 0x3e99999a    # 0.3f
+
+    const/16 v17, 0x8
+
+    const v18, 0x3e99999a    # 0.3f
+
+    move v12, v2
+
+    invoke-static/range {v12 .. v20}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    iget v5, v0, Lq2/c;->e:I
+
+    int-to-float v5, v5
+
+    iget v12, v0, Lf2/u;->H:I
+
+    int-to-float v13, v12
+
+    mul-float v13, v13, v21
+
+    add-float/2addr v13, v5
+
+    iget v5, v0, Lq2/c;->f:I
+
+    iget v14, v0, Lq2/c;->i:I
+
+    add-int/2addr v5, v14
+
+    iget v14, v0, Lf2/u;->G:I
+
+    add-int/2addr v5, v14
+
+    mul-int v14, v12, v3
+
+    add-int/2addr v5, v14
+
+    int-to-float v5, v5
+
+    int-to-float v12, v12
+
+    const v14, 0x3f333333    # 0.7f
+
+    mul-float v12, v12, v14
+
+    add-float v14, v5, v12
+
+    iget v5, v0, Lq2/c;->g:I
+
+    int-to-float v15, v5
+
+    sget-object v5, Lq2/j;->c:[[I
+
+    iget v12, v0, Lf2/u;->u:I
+
+    aget-object v5, v5, v12
+
+    aget v5, v5, v3
+
+    invoke-static {v5}, Lq2/m;->c(I)Ljava/lang/String;
+
+    move-result-object v16
+
+    move v12, v2
+
+    invoke-static/range {v12 .. v20}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    sget-object v2, LW1/b;->s:Lc2/c;
+
+    iget-object v2, v2, Lc2/c;->a:Lc2/k;
+
+    iget-object v2, v2, Lc2/k;->a:[[Lb2/i;
+
+    iget v5, v0, Lf2/u;->u:I
+
+    aget-object v2, v2, v5
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v2}, Lb2/i;->d()J
+
+    move-result-wide v12
+
+    sget-object v2, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v2, Lc2/c;->a:Lc2/k;
+
+    iget-object v14, v5, Lc2/k;->b:[[I
+
+    iget v15, v0, Lf2/u;->u:I
+
+    aget-object v14, v14, v15
+
+    aget v14, v14, v3
+
+    int-to-long v9, v14
+
+    cmp-long v14, v12, v9
+
+    if-ltz v14, :cond_26
+
+    const/4 v9, 0x1
+
+    goto :goto_1a
+
+    :cond_26
+    const/4 v9, 0x0
+
+    :goto_1a
+    const/high16 v10, 0x3f800000    # 1.0f
+
+    const/16 v12, 0x1c
+
+    const-string v13, "  "
+
+    const v14, 0x3ecccccd    # 0.4f
+
+    if-nez v15, :cond_29
+
+    if-eqz v9, :cond_27
+
+    iget v2, v0, Lf2/u;->H:I
+
+    mul-int/lit8 v5, v2, 0x1b
+
+    int-to-float v5, v5
+
+    div-float v22, v5, v11
+
+    iget v5, v0, Lq2/c;->e:I
+
+    iget v9, v0, Lq2/c;->g:I
+
+    add-int/2addr v5, v9
+
+    iget v9, v0, Lf2/u;->I:I
+
+    sub-int/2addr v5, v9
+
+    int-to-float v5, v5
+
+    iget v10, v0, Lq2/c;->f:I
+
+    iget v11, v0, Lq2/c;->i:I
+
+    add-int/2addr v10, v11
+
+    iget v11, v0, Lf2/u;->G:I
+
+    add-int/2addr v10, v11
+
+    mul-int v11, v2, v3
+
+    add-int/2addr v10, v11
+
+    int-to-float v10, v10
+
+    int-to-float v2, v2
+
+    mul-float v2, v2, v14
+
+    add-float v24, v10, v2
+
+    int-to-float v2, v9
+
+    invoke-static {v12}, Lq2/m;->c(I)Ljava/lang/String;
+
+    move-result-object v26
+
+    const/high16 v29, 0x3f800000    # 1.0f
+
+    const/high16 v30, 0x3f800000    # 1.0f
+
+    const/16 v27, 0x1
+
+    const/high16 v28, 0x3f800000    # 1.0f
+
+    move/from16 v23, v5
+
+    move/from16 v25, v2
+
+    invoke-static/range {v22 .. v30}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    goto/16 :goto_21
+
+    :cond_27
+    invoke-virtual {v5, v3}, Lc2/k;->D(I)Lb2/d;
+
+    move-result-object v2
+
+    sget-object v5, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v5, Lc2/c;->j:Lb2/d;
+
+    invoke-virtual {v2, v5}, Lb2/d;->k(Lb2/d;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_28
+
+    const v31, 0x3ee66666    # 0.45f
+
+    goto :goto_1b
+
+    :cond_28
+    const/high16 v31, 0x3f800000    # 1.0f
+
+    :goto_1b
+    iget v2, v0, Lf2/u;->H:I
+
+    mul-int/lit8 v5, v2, 0x1b
+
+    int-to-float v5, v5
+
+    div-float v23, v5, v11
+
+    iget v5, v0, Lq2/c;->e:I
+
+    iget v9, v0, Lq2/c;->g:I
+
+    add-int/2addr v5, v9
+
+    iget v9, v0, Lf2/u;->I:I
+
+    sub-int/2addr v5, v9
+
+    int-to-float v5, v5
+
+    iget v10, v0, Lq2/c;->f:I
+
+    iget v11, v0, Lq2/c;->i:I
+
+    add-int/2addr v10, v11
+
+    iget v11, v0, Lf2/u;->G:I
+
+    add-int/2addr v10, v11
+
+    mul-int v11, v2, v3
+
+    add-int/2addr v10, v11
+
+    int-to-float v10, v10
+
+    int-to-float v2, v2
+
+    mul-float v2, v2, v14
+
+    add-float v25, v10, v2
+
+    int-to-float v2, v9
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v9, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v10, LW1/b;->s:Lc2/c;
+
+    iget-object v10, v10, Lc2/c;->a:Lc2/k;
+
+    invoke-virtual {v10, v3}, Lc2/k;->D(I)Lb2/d;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Lb2/d;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v27
+
+    const/16 v28, 0x1
+
+    const/high16 v29, 0x3f800000    # 1.0f
+
+    move/from16 v24, v5
+
+    move/from16 v26, v2
+
+    move/from16 v30, v31
+
+    invoke-static/range {v23 .. v31}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    move-result-object v2
+
+    iget-object v5, v0, Lf2/u;->L:[[I
+
+    iget v9, v0, Lf2/u;->u:I
+
+    aget-object v5, v5, v9
+
+    iget v2, v2, Lo0/d;->d:F
+
+    float-to-int v2, v2
+
+    aput v2, v5, v3
+
+    goto/16 :goto_21
+
+    :cond_29
+    if-ne v15, v7, :cond_2c
+
+    if-eqz v9, :cond_2a
+
+    iget v2, v0, Lf2/u;->H:I
+
+    mul-int/lit8 v5, v2, 0x1b
+
+    int-to-float v5, v5
+
+    div-float v22, v5, v11
+
+    iget v5, v0, Lq2/c;->e:I
+
+    iget v9, v0, Lq2/c;->g:I
+
+    add-int/2addr v5, v9
+
+    iget v9, v0, Lf2/u;->I:I
+
+    sub-int/2addr v5, v9
+
+    int-to-float v5, v5
+
+    iget v10, v0, Lq2/c;->f:I
+
+    iget v11, v0, Lq2/c;->i:I
+
+    add-int/2addr v10, v11
+
+    iget v11, v0, Lf2/u;->G:I
+
+    add-int/2addr v10, v11
+
+    mul-int v11, v2, v3
+
+    add-int/2addr v10, v11
+
+    mul-int/lit8 v2, v2, 0x28
+
+    const/16 v11, 0x64
+
+    div-int/2addr v2, v11
+
+    add-int/2addr v10, v2
+
+    int-to-float v2, v10
+
+    int-to-float v9, v9
+
+    invoke-static {v12}, Lq2/m;->c(I)Ljava/lang/String;
+
+    move-result-object v26
+
+    const/high16 v29, 0x3f800000    # 1.0f
+
+    const/high16 v30, 0x3f800000    # 1.0f
+
+    const/16 v27, 0x1
+
+    const/high16 v28, 0x3f800000    # 1.0f
+
+    move/from16 v23, v5
+
+    move/from16 v24, v2
+
+    move/from16 v25, v9
+
+    invoke-static/range {v22 .. v30}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    goto/16 :goto_21
+
+    :cond_2a
+    iget-object v2, v2, Lc2/c;->m:Lb2/d;
+
+    invoke-virtual {v5, v3}, Lc2/k;->F(I)J
+
+    move-result-wide v14
+
+    invoke-virtual {v2, v14, v15}, Lb2/d;->l(J)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2b
+
+    const/high16 v31, 0x3f800000    # 1.0f
+
+    goto :goto_1c
+
+    :cond_2b
+    const v31, 0x3ee66666    # 0.45f
+
+    :goto_1c
+    iget v2, v0, Lf2/u;->H:I
+
+    mul-int/lit8 v5, v2, 0x1b
+
+    int-to-float v5, v5
+
+    div-float v23, v5, v11
+
+    iget v5, v0, Lq2/c;->e:I
+
+    iget v9, v0, Lq2/c;->g:I
+
+    add-int/2addr v5, v9
+
+    iget v9, v0, Lf2/u;->I:I
+
+    sub-int/2addr v5, v9
+
+    int-to-float v5, v5
+
+    iget v10, v0, Lq2/c;->f:I
+
+    iget v11, v0, Lq2/c;->i:I
+
+    add-int/2addr v10, v11
+
+    iget v11, v0, Lf2/u;->G:I
+
+    add-int/2addr v10, v11
+
+    mul-int v11, v2, v3
+
+    add-int/2addr v10, v11
+
+    mul-int/lit8 v2, v2, 0x28
+
+    const/16 v11, 0x64
+
+    div-int/2addr v2, v11
+
+    add-int/2addr v10, v2
+
+    int-to-float v2, v10
+
+    int-to-float v9, v9
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v10, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v11, LW1/b;->s:Lc2/c;
+
+    iget-object v11, v11, Lc2/c;->a:Lc2/k;
+
+    invoke-virtual {v11, v3}, Lc2/k;->F(I)J
+
+    move-result-wide v11
+
+    invoke-static {v11, v12}, Lq2/q;->d(J)Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v27
+
+    const/16 v28, 0x1
+
+    const/high16 v29, 0x3f800000    # 1.0f
+
+    move/from16 v24, v5
+
+    move/from16 v25, v2
+
+    move/from16 v26, v9
+
+    move/from16 v30, v31
+
+    invoke-static/range {v23 .. v31}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    move-result-object v2
+
+    iget-object v5, v0, Lf2/u;->L:[[I
+
+    iget v9, v0, Lf2/u;->u:I
+
+    aget-object v5, v5, v9
+
+    iget v2, v2, Lo0/d;->d:F
+
+    float-to-int v2, v2
+
+    aput v2, v5, v3
+
+    goto/16 :goto_21
+
+    :cond_2c
+    if-ne v15, v4, :cond_32
+
+    if-eqz v9, :cond_2d
+
+    iget v2, v0, Lf2/u;->H:I
+
+    mul-int/lit8 v5, v2, 0x1b
+
+    int-to-float v5, v5
+
+    div-float v22, v5, v11
+
+    iget v5, v0, Lq2/c;->e:I
+
+    iget v9, v0, Lq2/c;->g:I
+
+    add-int/2addr v5, v9
+
+    iget v9, v0, Lf2/u;->I:I
+
+    sub-int/2addr v5, v9
+
+    int-to-float v5, v5
+
+    iget v10, v0, Lq2/c;->f:I
+
+    iget v11, v0, Lq2/c;->i:I
+
+    add-int/2addr v10, v11
+
+    iget v11, v0, Lf2/u;->G:I
+
+    add-int/2addr v10, v11
+
+    mul-int v11, v2, v3
+
+    add-int/2addr v10, v11
+
+    mul-int/lit8 v2, v2, 0x28
+
+    const/16 v11, 0x64
+
+    div-int/2addr v2, v11
+
+    add-int/2addr v10, v2
+
+    int-to-float v2, v10
+
+    int-to-float v9, v9
+
+    invoke-static {v12}, Lq2/m;->c(I)Ljava/lang/String;
+
+    move-result-object v26
+
+    const/high16 v29, 0x3f800000    # 1.0f
+
+    const/high16 v30, 0x3f800000    # 1.0f
+
+    const/16 v27, 0x1
+
+    const/high16 v28, 0x3f800000    # 1.0f
+
+    move/from16 v23, v5
+
+    move/from16 v24, v2
+
+    move/from16 v25, v9
+
+    invoke-static/range {v22 .. v30}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    goto/16 :goto_21
+
+    :cond_2d
+    invoke-virtual {v5, v3}, Lc2/k;->E(I)Lb2/d;
+
+    move-result-object v2
+
+    sget-object v5, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v5, Lc2/c;->k:Lb2/d;
+
+    invoke-virtual {v2, v5}, Lb2/d;->k(Lb2/d;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2e
+
+    const v31, 0x3ee66666    # 0.45f
+
+    goto :goto_1d
+
+    :cond_2e
+    const/high16 v31, 0x3f800000    # 1.0f
+
+    :goto_1d
+    iget v5, v0, Lf2/u;->H:I
+
+    int-to-float v9, v5
+
+    const v10, 0x3e8a3d71    # 0.27f
+
+    mul-float v9, v9, v10
+
+    int-to-float v5, v5
+
+    mul-float v5, v5, v14
+
+    sget-object v10, LW1/b;->s:Lc2/c;
+
+    iget-object v10, v10, Lc2/c;->k:Lb2/d;
+
+    invoke-virtual {v10}, Lb2/d;->g()I
+
+    move-result v10
+
+    if-ne v10, v4, :cond_2f
+
+    invoke-virtual {v2}, Lb2/d;->f()J
+
+    move-result-wide v10
+
+    const-wide/16 v14, 0x3de
+
+    cmp-long v12, v10, v14
+
+    if-gez v12, :cond_30
+
+    :cond_2f
+    sget-object v10, LW1/b;->s:Lc2/c;
+
+    iget-object v10, v10, Lc2/c;->k:Lb2/d;
+
+    invoke-virtual {v10}, Lb2/d;->g()I
+
+    move-result v10
+
+    if-nez v10, :cond_31
+
+    invoke-virtual {v2}, Lb2/d;->f()J
+
+    move-result-wide v10
+
+    const-wide/16 v14, 0x17c
+
+    cmp-long v12, v10, v14
+
+    if-ltz v12, :cond_31
+
+    :cond_30
+    iget v5, v0, Lf2/u;->H:I
+
+    int-to-float v9, v5
+
+    const v10, 0x3e6b851f    # 0.23f
+
+    mul-float v9, v9, v10
+
+    int-to-float v5, v5
+
+    const v10, 0x3ecfdf3b    # 0.406f
+
+    mul-float v5, v5, v10
+
+    :cond_31
+    move/from16 v23, v9
+
+    iget v9, v0, Lq2/c;->e:I
+
+    iget v10, v0, Lq2/c;->g:I
+
+    add-int/2addr v9, v10
+
+    iget v10, v0, Lf2/u;->I:I
+
+    sub-int/2addr v9, v10
+
+    int-to-float v9, v9
+
+    iget v11, v0, Lq2/c;->f:I
+
+    iget v12, v0, Lq2/c;->i:I
+
+    add-int/2addr v11, v12
+
+    iget v12, v0, Lf2/u;->G:I
+
+    add-int/2addr v11, v12
+
+    iget v12, v0, Lf2/u;->H:I
+
+    mul-int v12, v12, v3
+
+    add-int/2addr v11, v12
+
+    int-to-float v11, v11
+
+    add-float v25, v11, v5
+
+    int-to-float v5, v10
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v10, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v27
+
+    const/16 v28, 0x1
+
+    const/high16 v29, 0x3f800000    # 1.0f
+
+    move/from16 v24, v9
+
+    move/from16 v26, v5
+
+    move/from16 v30, v31
+
+    invoke-static/range {v23 .. v31}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    move-result-object v2
+
+    iget-object v5, v0, Lf2/u;->L:[[I
+
+    iget v9, v0, Lf2/u;->u:I
+
+    aget-object v5, v5, v9
+
+    iget v2, v2, Lo0/d;->d:F
+
+    float-to-int v2, v2
+
+    aput v2, v5, v3
+
+    goto/16 :goto_21
+
+    :cond_32
+    if-ne v15, v6, :cond_37
+
+    if-eqz v9, :cond_33
+
+    iget v2, v0, Lf2/u;->H:I
+
+    mul-int/lit8 v5, v2, 0x1b
+
+    int-to-float v5, v5
+
+    div-float v22, v5, v11
+
+    iget v5, v0, Lq2/c;->e:I
+
+    iget v9, v0, Lq2/c;->g:I
+
+    add-int/2addr v5, v9
+
+    iget v9, v0, Lf2/u;->I:I
+
+    sub-int/2addr v5, v9
+
+    int-to-float v5, v5
+
+    iget v10, v0, Lq2/c;->f:I
+
+    iget v11, v0, Lq2/c;->i:I
+
+    add-int/2addr v10, v11
+
+    iget v11, v0, Lf2/u;->G:I
+
+    add-int/2addr v10, v11
+
+    mul-int v11, v2, v3
+
+    add-int/2addr v10, v11
+
+    int-to-float v10, v10
+
+    int-to-float v2, v2
+
+    mul-float v2, v2, v14
+
+    add-float v24, v10, v2
+
+    int-to-float v2, v9
+
+    invoke-static {v12}, Lq2/m;->c(I)Ljava/lang/String;
+
+    move-result-object v26
+
+    const/high16 v29, 0x3f800000    # 1.0f
+
+    const/high16 v30, 0x3f800000    # 1.0f
+
+    const/16 v27, 0x1
+
+    const/high16 v28, 0x3f800000    # 1.0f
+
+    move/from16 v23, v5
+
+    move/from16 v25, v2
+
+    invoke-static/range {v22 .. v30}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    goto/16 :goto_21
+
+    :cond_33
+    invoke-virtual {v5, v3}, Lc2/k;->G(I)Lb2/d;
+
+    move-result-object v2
+
+    sget-object v5, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v5, Lc2/c;->B:Lb2/d;
+
+    invoke-virtual {v2, v5}, Lb2/d;->k(Lb2/d;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_34
+
+    const v31, 0x3ee66666    # 0.45f
+
+    goto :goto_1e
+
+    :cond_34
+    const/high16 v31, 0x3f800000    # 1.0f
+
+    :goto_1e
+    const/high16 v29, 0x3f800000    # 1.0f
+
+    if-gtz v3, :cond_36
+
+    sget-object v2, LW1/b;->s:Lc2/c;
+
+    iget-object v2, v2, Lc2/c;->a:Lc2/k;
+
+    iget-object v2, v2, Lc2/k;->a:[[Lb2/i;
+
+    aget-object v2, v2, v6
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v2}, Lb2/i;->d()J
+
+    move-result-wide v9
+
+    const-wide/16 v11, 0x32
+
+    cmp-long v2, v9, v11
+
+    if-lez v2, :cond_35
+
+    goto :goto_1f
+
+    :cond_35
+    iget v2, v0, Lf2/u;->H:I
+
+    int-to-float v5, v2
+
+    const v9, 0x3e8a3d71    # 0.27f
+
+    mul-float v23, v5, v9
+
+    iget v5, v0, Lq2/c;->e:I
+
+    iget v9, v0, Lq2/c;->g:I
+
+    add-int/2addr v5, v9
+
+    iget v9, v0, Lf2/u;->I:I
+
+    sub-int/2addr v5, v9
+
+    int-to-float v5, v5
+
+    iget v10, v0, Lq2/c;->f:I
+
+    iget v11, v0, Lq2/c;->i:I
+
+    add-int/2addr v10, v11
+
+    iget v11, v0, Lf2/u;->G:I
+
+    add-int/2addr v10, v11
+
+    mul-int v11, v2, v3
+
+    add-int/2addr v10, v11
+
+    int-to-float v10, v10
+
+    int-to-float v2, v2
+
+    mul-float v2, v2, v14
+
+    add-float v25, v10, v2
+
+    int-to-float v2, v9
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v9, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v10, LW1/b;->s:Lc2/c;
+
+    iget-object v10, v10, Lc2/c;->a:Lc2/k;
+
+    invoke-virtual {v10, v3}, Lc2/k;->G(I)Lb2/d;
+
+    move-result-object v10
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v27
+
+    const/16 v28, 0x1
+
+    move/from16 v24, v5
+
+    move/from16 v26, v2
+
+    move/from16 v30, v31
+
+    invoke-static/range {v23 .. v31}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    move-result-object v2
+
+    goto :goto_20
+
+    :cond_36
+    :goto_1f
+    iget v2, v0, Lf2/u;->H:I
+
+    int-to-float v5, v2
+
+    const/high16 v9, 0x3e800000    # 0.25f
+
+    mul-float v23, v5, v9
+
+    iget v5, v0, Lq2/c;->e:I
+
+    iget v9, v0, Lq2/c;->g:I
+
+    add-int/2addr v5, v9
+
+    iget v9, v0, Lf2/u;->I:I
+
+    sub-int/2addr v5, v9
+
+    int-to-float v5, v5
+
+    iget v10, v0, Lq2/c;->f:I
+
+    iget v11, v0, Lq2/c;->i:I
+
+    add-int/2addr v10, v11
+
+    iget v11, v0, Lf2/u;->G:I
+
+    add-int/2addr v10, v11
+
+    mul-int v11, v2, v3
+
+    add-int/2addr v10, v11
+
+    int-to-float v10, v10
+
+    int-to-float v2, v2
+
+    mul-float v2, v2, v14
+
+    add-float v25, v10, v2
+
+    int-to-float v2, v9
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v9, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v10, LW1/b;->s:Lc2/c;
+
+    iget-object v10, v10, Lc2/c;->a:Lc2/k;
+
+    invoke-virtual {v10, v3}, Lc2/k;->G(I)Lb2/d;
+
+    move-result-object v10
+
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v27
+
+    const/16 v28, 0x1
+
+    move/from16 v24, v5
+
+    move/from16 v26, v2
+
+    move/from16 v30, v31
+
+    invoke-static/range {v23 .. v31}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    move-result-object v2
+
+    :goto_20
+    iget-object v5, v0, Lf2/u;->L:[[I
+
+    iget v9, v0, Lf2/u;->u:I
+
+    aget-object v5, v5, v9
+
+    iget v2, v2, Lo0/d;->d:F
+
+    float-to-int v2, v2
+
+    aput v2, v5, v3
+
+    :cond_37
+    :goto_21
+    add-int/lit8 v3, v3, 0x1
+
+    const/4 v2, 0x0
+
+    goto/16 :goto_c
+
+    :cond_38
+    return-void
+.end method
+
+
+# virtual methods
+.method public k()V
+    .locals 20
+
+    move-object/from16 v0, p0
+
+    iget v1, v0, Lf2/u;->u:I
+
+    const/4 v2, 0x0
+
+    if-gez v1, :cond_0
+
+    iput v2, v0, Lf2/u;->u:I
+
+    :cond_0
+    iget v1, v0, Lq2/c;->g:I
+
+    mul-int/lit8 v3, v1, 0x6e
+
+    const/16 v4, 0x64
+
+    div-int/2addr v3, v4
+
+    div-int/lit8 v3, v3, 0x8
+
+    iput v3, v0, Lf2/u;->G:I
+
+    mul-int/lit8 v3, v1, 0x78
+
+    div-int/2addr v3, v4
+
+    div-int/lit8 v3, v3, 0x8
+
+    iput v3, v0, Lf2/u;->H:I
+
+    mul-int/lit16 v1, v1, 0xf0
+
+    div-int/2addr v1, v4
+
+    div-int/lit8 v1, v1, 0x8
+
+    iput v1, v0, Lf2/u;->I:I
+
+    iget-object v1, v0, Lf2/u;->L:[[I
+
+    const/4 v3, 0x6
+
+    const/4 v5, 0x3
+
+    const/16 v6, 0x14
+
+    const/4 v7, 0x1
+
+    const/4 v8, 0x2
+
+    if-nez v1, :cond_2
+
+    new-array v1, v8, [I
+
+    aput v6, v1, v7
+
+    const/4 v9, 0x5
+
+    aput v9, v1, v2
+
+    sget-object v9, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    invoke-static {v9, v1}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [[I
+
+    iput-object v1, v0, Lf2/u;->L:[[I
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v5, :cond_2
+
+    const/4 v9, 0x0
+
+    :goto_1
+    if-ge v9, v6, :cond_1
+
+    iget-object v10, v0, Lf2/u;->L:[[I
+
+    aget-object v10, v10, v1
+
+    iget v11, v0, Lq2/c;->j:I
+
+    mul-int/lit16 v11, v11, 0xf0
+
+    div-int/2addr v11, v4
+
+    div-int/lit8 v11, v11, 0x8
+
+    mul-int/lit8 v11, v11, 0x6
+
+    div-int/lit8 v11, v11, 0xa
+
+    aput v11, v10, v9
+
+    add-int/lit8 v9, v9, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    iget v1, v0, Lq2/c;->e:I
+
+    int-to-float v1, v1
+
+    iget v9, v0, Lq2/c;->f:I
+
+    iget v10, v0, Lq2/c;->i:I
+
+    add-int/2addr v9, v10
+
+    int-to-float v9, v9
+
+    iget v10, v0, Lq2/c;->g:I
+
+    int-to-float v10, v10
+
+    iget v11, v0, Lf2/u;->G:I
+
+    int-to-float v11, v11
+
+    sget-object v12, Lq2/b;->b:Ln0/b;
+
+    invoke-static {v1, v9, v10, v11, v12}, Lq2/e;->Q(FFFFLn0/b;)V
+
+    iget v1, v0, Lq2/c;->e:I
+
+    int-to-float v1, v1
+
+    iget v9, v0, Lq2/c;->f:I
+
+    iget v10, v0, Lq2/c;->i:I
+
+    add-int/2addr v9, v10
+
+    int-to-float v9, v9
+
+    iget v10, v0, Lq2/c;->g:I
+
+    int-to-float v10, v10
+
+    iget v11, v0, Lf2/u;->G:I
+
+    div-int/2addr v11, v8
+
+    int-to-float v11, v11
+
+    sget-object v12, Lq2/b;->c:Ln0/b;
+
+    invoke-static {v1, v9, v10, v11, v12}, Lq2/e;->Q(FFFFLn0/b;)V
+
+    iget v1, v0, Lq2/c;->e:I
+
+    iget v9, v0, Lq2/c;->g:I
+
+    iget v10, v0, Lf2/u;->u:I
+
+    mul-int v9, v9, v10
+
+    invoke-direct/range {p0 .. p0}, Lf2/u;->s()I
+
+    move-result v10
+
+    div-int/2addr v9, v10
+
+    add-int/2addr v1, v9
+
+    int-to-float v1, v1
+
+    iget v9, v0, Lq2/c;->f:I
+
+    iget v10, v0, Lq2/c;->i:I
+
+    add-int/2addr v9, v10
+
+    int-to-float v9, v9
+
+    iget v10, v0, Lq2/c;->g:I
+
+    invoke-direct/range {p0 .. p0}, Lf2/u;->s()I
+
+    move-result v11
+
+    div-int/2addr v10, v11
+
+    add-int/2addr v10, v7
+
+    int-to-float v10, v10
+
+    iget v11, v0, Lf2/u;->G:I
+
+    int-to-float v11, v11
+
+    sget-object v12, Lq2/b;->d:Ln0/b;
+
+    invoke-static {v1, v9, v10, v11, v12}, Lq2/e;->Q(FFFFLn0/b;)V
+
+    iget v1, v0, Lq2/c;->e:I
+
+    iget v9, v0, Lq2/c;->g:I
+
+    iget v10, v0, Lf2/u;->u:I
+
+    mul-int v9, v9, v10
+
+    invoke-direct/range {p0 .. p0}, Lf2/u;->s()I
+
+    move-result v10
+
+    div-int/2addr v9, v10
+
+    add-int/2addr v1, v9
+
+    int-to-float v1, v1
+
+    iget v9, v0, Lq2/c;->f:I
+
+    iget v10, v0, Lq2/c;->i:I
+
+    add-int/2addr v9, v10
+
+    int-to-float v9, v9
+
+    iget v10, v0, Lq2/c;->g:I
+
+    invoke-direct/range {p0 .. p0}, Lf2/u;->s()I
+
+    move-result v11
+
+    div-int/2addr v10, v11
+
+    add-int/2addr v10, v7
+
+    int-to-float v10, v10
+
+    iget v11, v0, Lf2/u;->G:I
+
+    div-int/2addr v11, v8
+
+    int-to-float v11, v11
+
+    sget-object v13, Lq2/b;->e:Ln0/b;
+
+    invoke-static {v1, v9, v10, v11, v13}, Lq2/e;->Q(FFFFLn0/b;)V
+
+    iget v1, v0, Lf2/u;->v:I
+
+    const/4 v9, -0x1
+
+    if-eq v1, v9, :cond_3
+
+    iget v9, v0, Lq2/c;->e:I
+
+    iget v10, v0, Lq2/c;->g:I
+
+    mul-int v10, v10, v1
+
+    invoke-direct/range {p0 .. p0}, Lf2/u;->s()I
+
+    move-result v1
+
+    div-int/2addr v10, v1
+
+    add-int/2addr v9, v10
+
+    int-to-float v1, v9
+
+    iget v9, v0, Lq2/c;->f:I
+
+    iget v10, v0, Lq2/c;->i:I
+
+    add-int/2addr v9, v10
+
+    int-to-float v9, v9
+
+    iget v10, v0, Lq2/c;->g:I
+
+    invoke-direct/range {p0 .. p0}, Lf2/u;->s()I
+
+    move-result v11
+
+    div-int/2addr v10, v11
+
+    add-int/2addr v10, v7
+
+    int-to-float v10, v10
+
+    iget v11, v0, Lf2/u;->G:I
+
+    int-to-float v11, v11
+
+    invoke-static {v1, v9, v10, v11, v12}, Lq2/e;->Q(FFFFLn0/b;)V
+
+    iget v1, v0, Lq2/c;->e:I
+
+    iget v9, v0, Lq2/c;->g:I
+
+    iget v10, v0, Lf2/u;->v:I
+
+    mul-int v9, v9, v10
+
+    invoke-direct/range {p0 .. p0}, Lf2/u;->s()I
+
+    move-result v10
+
+    div-int/2addr v9, v10
+
+    add-int/2addr v1, v9
+
+    int-to-float v1, v1
+
+    iget v9, v0, Lq2/c;->f:I
+
+    iget v10, v0, Lq2/c;->i:I
+
+    add-int/2addr v9, v10
+
+    int-to-float v9, v9
+
+    iget v10, v0, Lq2/c;->g:I
+
+    invoke-direct/range {p0 .. p0}, Lf2/u;->s()I
+
+    move-result v11
+
+    div-int/2addr v10, v11
+
+    add-int/2addr v10, v7
+
+    int-to-float v10, v10
+
+    iget v11, v0, Lf2/u;->G:I
+
+    div-int/2addr v11, v8
+
+    int-to-float v11, v11
+
+    invoke-static {v1, v9, v10, v11, v13}, Lq2/e;->Q(FFFFLn0/b;)V
+
+    :cond_3
+    const/4 v1, 0x0
+
+    :goto_2
+    invoke-direct/range {p0 .. p0}, Lf2/u;->s()I
+
+    move-result v9
+
+    const/4 v10, 0x4
+
+    if-ge v1, v9, :cond_8
+
+    iget v9, v0, Lf2/u;->G:I
+
+    iget v11, v0, Lq2/c;->f:I
+
+    iget v12, v0, Lq2/c;->i:I
+
+    add-int/2addr v11, v12
+
+    iget v12, v0, Lq2/c;->e:I
+
+    iget v13, v0, Lq2/c;->g:I
+
+    mul-int v13, v13, v1
+
+    invoke-direct/range {p0 .. p0}, Lf2/u;->s()I
+
+    move-result v14
+
+    div-int/2addr v13, v14
+
+    add-int/2addr v12, v13
+
+    iget v13, v0, Lq2/c;->g:I
+
+    invoke-direct/range {p0 .. p0}, Lf2/u;->s()I
+
+    move-result v14
+
+    div-int/2addr v13, v14
+
+    div-int/2addr v13, v8
+
+    add-int/2addr v12, v13
+
+    div-int/lit8 v13, v9, 0x2
+
+    sub-int/2addr v12, v13
+
+    if-ne v1, v10, :cond_4
+
+    const/16 v10, 0x21
+
+    goto :goto_3
+
+    :cond_4
+    if-ne v1, v5, :cond_5
+
+    const/16 v10, 0x49
+
+    goto :goto_3
+
+    :cond_5
+    if-ne v1, v8, :cond_6
+
+    const/16 v10, 0x28
+
+    goto :goto_3
+
+    :cond_6
+    if-ne v1, v7, :cond_7
+
+    const/16 v10, 0x14
+
+    goto :goto_3
+
+    :cond_7
+    const/16 v10, 0x19
+
+    :goto_3
+    int-to-float v9, v9
+
+    const/high16 v13, 0x42200000    # 40.0f
+
+    div-float v13, v9, v13
+
+    invoke-static {v13}, Lq2/e;->h0(F)V
+
+    int-to-float v12, v12
+
+    int-to-float v11, v11
+
+    invoke-static {v10, v12, v11, v9, v9}, Lq2/e;->B(IFFFF)V
+
+    invoke-static {}, Lq2/e;->g0()V
+
+    invoke-static {v10, v12, v11, v9, v9}, Lq2/e;->B(IFFFF)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_2
+
+    :cond_8
+    iget v1, v0, Lf2/u;->u:I
+
+    const/16 v6, 0x1b
+
+    const/4 v9, 0x7
+
+    if-ne v1, v5, :cond_b
+
+    sget-object v1, LW1/b;->s:Lc2/c;
+
+    iget-object v1, v1, Lc2/c;->b:Lc2/g;
+
+    invoke-virtual {v1}, Lc2/g;->r()J
+
+    move-result-wide v11
+
+    const-wide/16 v13, 0x28
+
+    cmp-long v1, v11, v13
+
+    if-gez v1, :cond_9
+
+    iget v1, v0, Lq2/c;->g:I
+
+    mul-int/lit8 v2, v1, 0x19
+
+    div-int/2addr v2, v4
+
+    iget v3, v0, Lq2/c;->f:I
+
+    mul-int/lit8 v5, v1, 0x41
+
+    div-int/2addr v5, v4
+
+    add-int/2addr v3, v5
+
+    iget v4, v0, Lq2/c;->e:I
+
+    div-int/lit8 v5, v1, 0x2
+
+    add-int/2addr v4, v5
+
+    div-int/lit8 v5, v2, 0x2
+
+    sub-int/2addr v4, v5
+
+    int-to-float v1, v1
+
+    const v5, 0x3e8f5c29    # 0.28f
+
+    mul-float v1, v1, v5
+
+    const/high16 v5, 0x42b40000    # 90.0f
+
+    div-float/2addr v1, v5
+
+    invoke-static {v1}, Lq2/e;->h0(F)V
+
+    int-to-float v12, v4
+
+    int-to-float v1, v3
+
+    int-to-float v14, v2
+
+    invoke-static {v6, v12, v1, v14, v14}, Lq2/e;->B(IFFFF)V
+
+    invoke-static {}, Lq2/e;->g0()V
+
+    invoke-static {v6, v12, v1, v14, v14}, Lq2/e;->B(IFFFF)V
+
+    const v2, 0x3e6147ae    # 0.22f
+
+    mul-float v11, v14, v2
+
+    const v2, 0x3ee66666    # 0.45f
+
+    mul-float v2, v2, v14
+
+    add-float v13, v1, v2
+
+    const v18, 0x3dcccccd    # 0.1f
+
+    const v19, 0x3dcccccd    # 0.1f
+
+    const-string v15, "x40"
+
+    const/16 v16, 0x1
+
+    const v17, 0x3dcccccd    # 0.1f
+
+    invoke-static/range {v11 .. v19}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    iget v1, v0, Lq2/c;->h:I
+
+    mul-int/lit8 v1, v1, 0x4
+
+    int-to-float v1, v1
+
+    const/high16 v2, 0x42c80000    # 100.0f
+
+    div-float v10, v1, v2
+
+    iget v1, v0, Lq2/c;->e:I
+
+    int-to-float v11, v1
+
+    iget v1, v0, Lq2/c;->f:I
+
+    iget v2, v0, Lq2/c;->i:I
+
+    add-int/2addr v1, v2
+
+    iget v2, v0, Lf2/u;->G:I
+
+    add-int/2addr v1, v2
+
+    int-to-float v1, v1
+
+    iget v2, v0, Lq2/c;->g:I
+
+    int-to-float v3, v2
+
+    const v4, 0x3e99999a    # 0.3f
+
+    mul-float v3, v3, v4
+
+    add-float v12, v1, v3
+
+    int-to-float v13, v2
+
+    invoke-static {v9}, Lq2/m;->c(I)Ljava/lang/String;
+
+    move-result-object v14
+
+    const/4 v15, 0x1
+
+    const v16, 0x3dcccccd    # 0.1f
+
+    invoke-static/range {v10 .. v18}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    goto/16 :goto_a
+
+    :cond_9
+    iget-object v1, v0, Lf2/u;->C:Lq2/p;
+
+    iget v3, v0, Lq2/c;->e:I
+
+    int-to-float v3, v3
+
+    iget v4, v0, Lq2/c;->f:I
+
+    int-to-float v4, v4
+
+    iget v5, v0, Lq2/c;->g:I
+
+    int-to-float v5, v5
+
+    iget v6, v0, Lq2/c;->h:I
+
+    int-to-float v6, v6
+
+    iget v8, v0, Lq2/c;->j:I
+
+    int-to-float v8, v8
+
+    invoke-virtual/range {p0 .. p0}, Lq2/c;->f()F
+
+    move-result v9
+
+    const/high16 v10, 0x3f800000    # 1.0f
+
+    cmpl-float v9, v9, v10
+
+    if-nez v9, :cond_a
+
+    goto :goto_4
+
+    :cond_a
+    const/4 v7, 0x0
+
+    :goto_4
+    move v2, v3
+
+    move v3, v4
+
+    move v4, v5
+
+    move v5, v6
+
+    move v6, v8
+
+    invoke-virtual/range {v1 .. v7}, Lq2/p;->k(FFFFFZ)V
+
+    goto/16 :goto_a
+
+    :cond_b
+    if-ne v1, v8, :cond_c
+
+    sget-object v1, LW1/b;->s:Lc2/c;
+
+    iget-object v1, v1, Lc2/c;->b:Lc2/g;
+
+    invoke-virtual {v1}, Lc2/g;->r()J
+
+    move-result-wide v11
+
+    const-wide/16 v13, 0xe
+
+    cmp-long v1, v11, v13
+
+    if-gtz v1, :cond_c
+
+    iget v1, v0, Lq2/c;->g:I
+
+    mul-int/lit8 v2, v1, 0x19
+
+    div-int/2addr v2, v4
+
+    iget v3, v0, Lq2/c;->f:I
+
+    mul-int/lit8 v5, v1, 0x41
+
+    div-int/2addr v5, v4
+
+    add-int/2addr v3, v5
+
+    iget v4, v0, Lq2/c;->e:I
+
+    div-int/lit8 v5, v1, 0x2
+
+    add-int/2addr v4, v5
+
+    div-int/lit8 v5, v2, 0x2
+
+    sub-int/2addr v4, v5
+
+    int-to-float v1, v1
+
+    const v5, 0x3e8f5c29    # 0.28f
+
+    mul-float v1, v1, v5
+
+    const/high16 v5, 0x42b40000    # 90.0f
+
+    div-float/2addr v1, v5
+
+    invoke-static {v1}, Lq2/e;->h0(F)V
+
+    int-to-float v12, v4
+
+    int-to-float v1, v3
+
+    int-to-float v14, v2
+
+    invoke-static {v6, v12, v1, v14, v14}, Lq2/e;->B(IFFFF)V
+
+    invoke-static {}, Lq2/e;->g0()V
+
+    invoke-static {v6, v12, v1, v14, v14}, Lq2/e;->B(IFFFF)V
+
+    const v2, 0x3e6147ae    # 0.22f
+
+    mul-float v11, v14, v2
+
+    const v2, 0x3ee66666    # 0.45f
+
+    mul-float v2, v2, v14
+
+    add-float v13, v1, v2
+
+    const v18, 0x3dcccccd    # 0.1f
+
+    const v19, 0x3dcccccd    # 0.1f
+
+    const-string v15, "x15"
+
+    const/16 v16, 0x1
+
+    const v17, 0x3dcccccd    # 0.1f
+
+    invoke-static/range {v11 .. v19}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    iget v1, v0, Lq2/c;->h:I
+
+    mul-int/lit8 v1, v1, 0x4
+
+    int-to-float v1, v1
+
+    const/high16 v2, 0x42c80000    # 100.0f
+
+    div-float v10, v1, v2
+
+    iget v1, v0, Lq2/c;->e:I
+
+    int-to-float v11, v1
+
+    iget v1, v0, Lq2/c;->f:I
+
+    iget v2, v0, Lq2/c;->i:I
+
+    add-int/2addr v1, v2
+
+    iget v2, v0, Lf2/u;->G:I
+
+    add-int/2addr v1, v2
+
+    int-to-float v1, v1
+
+    iget v2, v0, Lq2/c;->g:I
+
+    int-to-float v3, v2
+
+    const v4, 0x3e99999a    # 0.3f
+
+    mul-float v3, v3, v4
+
+    add-float v12, v1, v3
+
+    int-to-float v13, v2
+
+    invoke-static {v9}, Lq2/m;->c(I)Ljava/lang/String;
+
+    move-result-object v14
+
+    const/4 v15, 0x1
+
+    const v16, 0x3dcccccd    # 0.1f
+
+    invoke-static/range {v10 .. v18}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    goto/16 :goto_a
+
+    :cond_c
+    iget v1, v0, Lf2/u;->u:I
+
+    if-ne v1, v10, :cond_d
+
+    sget-object v1, LW1/b;->s:Lc2/c;
+
+    iget-object v1, v1, Lc2/c;->b:Lc2/g;
+
+    invoke-virtual {v1}, Lc2/g;->r()J
+
+    move-result-wide v11
+
+    const-wide/16 v13, 0x82
+
+    cmp-long v1, v11, v13
+
+    if-gez v1, :cond_d
+
+    iget v1, v0, Lq2/c;->g:I
+
+    mul-int/lit8 v2, v1, 0x19
+
+    div-int/2addr v2, v4
+
+    iget v3, v0, Lq2/c;->f:I
+
+    mul-int/lit8 v5, v1, 0x41
+
+    div-int/2addr v5, v4
+
+    add-int/2addr v3, v5
+
+    iget v4, v0, Lq2/c;->e:I
+
+    div-int/lit8 v5, v1, 0x2
+
+    add-int/2addr v4, v5
+
+    div-int/lit8 v5, v2, 0x2
+
+    sub-int/2addr v4, v5
+
+    int-to-float v1, v1
+
+    const v5, 0x3e8f5c29    # 0.28f
+
+    mul-float v1, v1, v5
+
+    const/high16 v5, 0x42b40000    # 90.0f
+
+    div-float/2addr v1, v5
+
+    invoke-static {v1}, Lq2/e;->h0(F)V
+
+    int-to-float v11, v4
+
+    int-to-float v1, v3
+
+    int-to-float v13, v2
+
+    invoke-static {v6, v11, v1, v13, v13}, Lq2/e;->B(IFFFF)V
+
+    invoke-static {}, Lq2/e;->g0()V
+
+    invoke-static {v6, v11, v1, v13, v13}, Lq2/e;->B(IFFFF)V
+
+    const v2, 0x3e6147ae    # 0.22f
+
+    mul-float v10, v13, v2
+
+    const v2, 0x3ee66666    # 0.45f
+
+    mul-float v2, v2, v13
+
+    add-float v12, v1, v2
+
+    const v17, 0x3dcccccd    # 0.1f
+
+    const v18, 0x3dcccccd    # 0.1f
+
+    const-string v14, "x130"
+
+    const/4 v15, 0x1
+
+    const v16, 0x3dcccccd    # 0.1f
+
+    invoke-static/range {v10 .. v18}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    iget v1, v0, Lq2/c;->h:I
+
+    int-to-float v1, v1
+
+    const v2, 0x3d23d70a    # 0.04f
+
+    mul-float v10, v1, v2
+
+    iget v1, v0, Lq2/c;->e:I
+
+    int-to-float v11, v1
+
+    iget v1, v0, Lq2/c;->f:I
+
+    iget v2, v0, Lq2/c;->i:I
+
+    add-int/2addr v1, v2
+
+    iget v2, v0, Lf2/u;->G:I
+
+    add-int/2addr v1, v2
+
+    int-to-float v1, v1
+
+    iget v2, v0, Lq2/c;->g:I
+
+    int-to-float v3, v2
+
+    const v4, 0x3e99999a    # 0.3f
+
+    mul-float v3, v3, v4
+
+    add-float v12, v1, v3
+
+    int-to-float v13, v2
+
+    invoke-static {v9}, Lq2/m;->c(I)Ljava/lang/String;
+
+    move-result-object v14
+
+    invoke-static/range {v10 .. v18}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    goto/16 :goto_a
+
+    :cond_d
+    sget-object v1, Lq2/j;->c:[[I
+
+    aget-object v5, v1, v7
+
+    aget v5, v5, v10
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const/16 v11, 0xe
+
+    invoke-static {v11}, Lq2/m;->c(I)Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-virtual {v6, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v11, ": "
+
+    invoke-virtual {v6, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v11, LW1/b;->t:Lf2/i;
+
+    iget-object v11, v11, Lf2/i;->u:Lf2/r;
+
+    invoke-virtual {v11}, Lf2/r;->s()J
+
+    move-result-wide v11
+
+    const-wide/16 v13, 0x3e8
+
+    mul-long v11, v11, v13
+
+    invoke-static {v11, v12}, Lq2/q;->l(J)Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-virtual {v6, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Lq2/m;->e(ILjava/lang/String;)V
+
+    sget v5, Lq2/m;->b:I
+
+    sget v6, Lq2/m;->l:I
+
+    if-ne v5, v6, :cond_e
+
+    aget-object v5, v1, v2
+
+    aget v3, v5, v3
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const/16 v6, 0xe
+
+    invoke-static {v6}, Lq2/m;->c(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v6, ": %"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v6, LW1/b;->s:Lc2/c;
+
+    iget-object v6, v6, Lc2/c;->a:Lc2/k;
+
+    invoke-virtual {v6}, Lc2/k;->z()J
+
+    move-result-wide v11
+
+    const-wide/16 v13, 0xa
+
+    add-long/2addr v11, v13
+
+    invoke-virtual {v5, v11, v12}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v3, v5}, Lq2/m;->e(ILjava/lang/String;)V
+
+    goto :goto_5
+
+    :cond_e
+    aget-object v5, v1, v2
+
+    aget v3, v5, v3
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const/16 v6, 0xe
+
+    invoke-static {v6}, Lq2/m;->c(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v6, ": "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v6, LW1/b;->s:Lc2/c;
+
+    iget-object v6, v6, Lc2/c;->a:Lc2/k;
+
+    invoke-virtual {v6}, Lc2/k;->z()J
+
+    move-result-wide v11
+
+    const-wide/16 v13, 0xa
+
+    add-long/2addr v11, v13
+
+    invoke-virtual {v5, v11, v12}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v6, "%"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v3, v5}, Lq2/m;->e(ILjava/lang/String;)V
+
+    :goto_5
+    sget-object v3, LW1/b;->s:Lc2/c;
+
+    iget-object v3, v3, Lc2/c;->a:Lc2/k;
+
+    iget-object v3, v3, Lc2/k;->a:[[Lb2/i;
+
+    aget-object v3, v3, v8
+
+    aget-object v3, v3, v7
+
+    invoke-virtual {v3}, Lb2/i;->d()J
+
+    move-result-wide v5
+
+    const-wide/16 v11, 0x64
+
+    add-long/2addr v5, v11
+
+    div-long/2addr v5, v11
+
+    const-wide/16 v13, 0x3
+
+    mul-long v5, v5, v13
+
+    iget-wide v13, v0, Lf2/u;->D:J
+
+    cmp-long v3, v13, v5
+
+    if-eqz v3, :cond_10
+
+    sget v3, Lq2/m;->b:I
+
+    sget v13, Lq2/m;->l:I
+
+    const-string v14, "x"
+
+    const-string v15, " "
+
+    if-ne v3, v13, :cond_f
+
+    aget-object v3, v1, v8
+
+    aget v3, v3, v7
+
+    new-instance v13, Ljava/lang/StringBuilder;
+
+    invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v13, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v9, v0, Lf2/u;->D:J
+
+    invoke-virtual {v13, v9, v10}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v10, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v3, v9, v10}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    sget-object v3, Lq2/j;->b:[[I
+
+    aget-object v3, v3, v8
+
+    aget v3, v3, v7
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v9, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v11, v0, Lf2/u;->D:J
+
+    invoke-virtual {v9, v11, v12}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v10, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v3, v9, v10}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_6
+
+    :cond_f
+    aget-object v3, v1, v8
+
+    aget v3, v3, v7
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v9, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v10, v0, Lf2/u;->D:J
+
+    invoke-virtual {v9, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v10, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v3, v9, v10}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    sget-object v3, Lq2/j;->b:[[I
+
+    aget-object v3, v3, v8
+
+    aget v3, v3, v7
+
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v9, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v10, v0, Lf2/u;->D:J
+
+    invoke-virtual {v9, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v10, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v3, v9, v10}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    :goto_6
+    iput-wide v5, v0, Lf2/u;->D:J
+
+    :cond_10
+    sget-object v3, LW1/b;->s:Lc2/c;
+
+    iget-object v3, v3, Lc2/c;->a:Lc2/k;
+
+    invoke-virtual {v3}, Lc2/k;->k()J
+
+    move-result-wide v5
+
+    const-string v3, "x2"
+
+    const-string v9, "x4"
+
+    const-wide/16 v10, 0x64
+
+    cmp-long v12, v5, v10
+
+    if-ltz v12, :cond_11
+
+    sget-object v5, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v5, Lc2/c;->a:Lc2/k;
+
+    iget-object v5, v5, Lc2/k;->b:[[I
+
+    aget-object v5, v5, v8
+
+    const/4 v6, 0x4
+
+    aget v5, v5, v6
+
+    if-le v5, v4, :cond_11
+
+    aget-object v5, v1, v8
+
+    aget v5, v5, v6
+
+    invoke-static {v5, v3, v9}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    sget-object v5, Lq2/j;->b:[[I
+
+    aget-object v10, v5, v8
+
+    aget v10, v10, v6
+
+    invoke-static {v10, v3, v9}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    aget-object v5, v5, v8
+
+    aget v5, v5, v6
+
+    const-string v6, "2x"
+
+    const-string v10, "4x"
+
+    invoke-static {v5, v6, v10}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    :cond_11
+    sget-object v5, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v5, Lc2/c;->a:Lc2/k;
+
+    invoke-virtual {v5}, Lc2/k;->k()J
+
+    move-result-wide v5
+
+    const-wide/16 v10, 0xc8
+
+    cmp-long v12, v5, v10
+
+    if-ltz v12, :cond_12
+
+    aget-object v5, v1, v8
+
+    const/4 v6, 0x4
+
+    aget v5, v5, v6
+
+    const-string v10, "x8"
+
+    invoke-static {v5, v9, v10}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    sget-object v5, Lq2/j;->b:[[I
+
+    aget-object v10, v5, v8
+
+    aget v10, v10, v6
+
+    const-string v11, "x8"
+
+    invoke-static {v10, v9, v11}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    aget-object v5, v5, v8
+
+    aget v5, v5, v6
+
+    const-string v6, "4x"
+
+    const-string v10, "8x"
+
+    invoke-static {v5, v6, v10}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    :cond_12
+    sget-object v5, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v5, Lc2/c;->a:Lc2/k;
+
+    invoke-virtual {v5}, Lc2/k;->l()J
+
+    move-result-wide v5
+
+    const-wide/16 v10, 0x64
+
+    cmp-long v12, v5, v10
+
+    if-lez v12, :cond_13
+
+    sget-object v5, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v5, Lc2/c;->a:Lc2/k;
+
+    iget-object v5, v5, Lc2/k;->b:[[I
+
+    aget-object v5, v5, v8
+
+    const/4 v6, 0x7
+
+    aget v5, v5, v6
+
+    if-le v5, v4, :cond_13
+
+    aget-object v4, v1, v8
+
+    aget v4, v4, v6
+
+    invoke-static {v4, v3, v9}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    sget-object v4, Lq2/j;->b:[[I
+
+    aget-object v5, v4, v8
+
+    aget v5, v5, v6
+
+    invoke-static {v5, v3, v9}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    aget-object v3, v4, v8
+
+    aget v3, v3, v6
+
+    const-string v4, "2x"
+
+    const-string v5, "4x"
+
+    invoke-static {v3, v4, v5}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    :cond_13
+    iget-object v3, v0, Lf2/u;->C:Lq2/p;
+
+    const/16 v4, 0x17
+
+    invoke-virtual {v3, v4}, Lq2/p;->j(I)Z
+
+    move-result v3
+
+    const-string v4, "0,5"
+
+    const-string v5, "0,1"
+
+    const-string v6, "0.5"
+
+    const-string v9, "0.1"
+
+    if-eqz v3, :cond_14
+
+    iget-boolean v3, v0, Lf2/u;->E:Z
+
+    if-nez v3, :cond_15
+
+    iput-boolean v7, v0, Lf2/u;->E:Z
+
+    sget-object v3, Lq2/j;->b:[[I
+
+    aget-object v7, v3, v2
+
+    aget v7, v7, v8
+
+    invoke-static {v7, v9, v6}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    aget-object v3, v3, v2
+
+    aget v3, v3, v8
+
+    invoke-static {v3, v5, v4}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    aget-object v3, v1, v2
+
+    aget v3, v3, v8
+
+    invoke-static {v3, v9, v6}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    aget-object v1, v1, v2
+
+    aget v1, v1, v8
+
+    invoke-static {v1, v5, v4}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_7
+
+    :cond_14
+    iget-boolean v3, v0, Lf2/u;->E:Z
+
+    if-eqz v3, :cond_15
+
+    iput-boolean v2, v0, Lf2/u;->E:Z
+
+    sget-object v3, Lq2/j;->b:[[I
+
+    aget-object v7, v3, v2
+
+    aget v7, v7, v8
+
+    invoke-static {v7, v6, v9}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    aget-object v3, v3, v2
+
+    aget v3, v3, v8
+
+    invoke-static {v3, v4, v5}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    aget-object v3, v1, v2
+
+    aget v3, v3, v8
+
+    invoke-static {v3, v6, v9}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    aget-object v1, v1, v2
+
+    aget v1, v1, v8
+
+    invoke-static {v1, v4, v5}, Lq2/m;->d(ILjava/lang/String;Ljava/lang/String;)V
+
+    :cond_15
+    :goto_7
+    invoke-direct/range {p0 .. p0}, Lf2/u;->v()V
+
+    iget v1, v0, Lf2/u;->u:I
+
+    const/4 v2, 0x4
+
+    if-ne v1, v2, :cond_18
+
+    iget v1, v0, Lq2/c;->g:I
+
+    int-to-float v2, v1
+
+    const v3, 0x3e4ccccd    # 0.2f
+
+    mul-float v2, v2, v3
+
+    const v3, 0x3ef5c28f    # 0.48f
+
+    mul-float v3, v3, v2
+
+    iget v4, v0, Lq2/c;->f:I
+
+    int-to-float v4, v4
+
+    int-to-float v1, v1
+
+    const v5, 0x3faccccd    # 1.35f
+
+    mul-float v1, v1, v5
+
+    add-float/2addr v4, v1
+
+    const v1, 0x4019999a    # 2.4f
+
+    mul-float v1, v1, v2
+
+    sget-object v5, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v5, Lc2/c;->B:Lb2/d;
+
+    invoke-virtual {v5}, Lb2/d;->f()J
+
+    move-result-wide v5
+
+    const-wide/16 v9, 0x2710
+
+    cmp-long v7, v5, v9
+
+    if-ltz v7, :cond_16
+
+    sget-object v5, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v5, Lc2/c;->B:Lb2/d;
+
+    invoke-virtual {v5}, Lb2/d;->g()I
+
+    move-result v5
+
+    if-ne v5, v8, :cond_16
+
+    const v1, 0x40333333    # 2.8f
+
+    :goto_8
+    mul-float v1, v1, v2
+
+    goto :goto_9
+
+    :cond_16
+    sget-object v5, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v5, Lc2/c;->B:Lb2/d;
+
+    invoke-virtual {v5}, Lb2/d;->f()J
+
+    move-result-wide v5
+
+    const-wide/16 v9, 0x3e8
+
+    cmp-long v7, v5, v9
+
+    if-ltz v7, :cond_17
+
+    sget-object v5, LW1/b;->s:Lc2/c;
+
+    iget-object v5, v5, Lc2/c;->B:Lb2/d;
+
+    invoke-virtual {v5}, Lb2/d;->g()I
+
+    move-result v5
+
+    if-ne v5, v8, :cond_17
+
+    const v1, 0x40266666    # 2.6f
+
+    goto :goto_8
+
+    :cond_17
+    :goto_9
+    iget v5, v0, Lq2/c;->e:I
+
+    int-to-float v5, v5
+
+    iget v6, v0, Lq2/c;->g:I
+
+    int-to-float v6, v6
+
+    sub-float/2addr v6, v1
+
+    const/high16 v7, 0x40000000    # 2.0f
+
+    div-float/2addr v6, v7
+
+    add-float v8, v5, v6
+
+    const v5, 0x3fb33333    # 1.4f
+
+    mul-float v5, v5, v3
+
+    sget-object v6, Lq2/b;->c:Ln0/b;
+
+    invoke-static {v8, v4, v1, v3, v6}, Lq2/e;->Q(FFFFLn0/b;)V
+
+    const v6, 0x3ea3d70a    # 0.32f
+
+    mul-float v6, v6, v5
+
+    sub-float v6, v8, v6
+
+    sub-float/2addr v3, v5
+
+    div-float/2addr v3, v7
+
+    add-float/2addr v3, v4
+
+    const/16 v7, 0x21
+
+    invoke-static {v7, v6, v3, v5, v5}, Lq2/e;->B(IFFFF)V
+
+    iget v3, v0, Lq2/c;->g:I
+
+    int-to-float v3, v3
+
+    const v5, 0x3d851eb8    # 0.065f
+
+    mul-float v7, v3, v5
+
+    const v3, 0x3df5c28f    # 0.12f
+
+    mul-float v2, v2, v3
+
+    add-float v9, v4, v2
+
+    const v2, 0x3f68f5c3    # 0.91f
+
+    mul-float v10, v1, v2
+
+    sget-object v1, LW1/b;->s:Lc2/c;
+
+    iget-object v1, v1, Lc2/c;->B:Lb2/d;
+
+    invoke-virtual {v1}, Lb2/d;->toString()Ljava/lang/String;
+
+    move-result-object v11
+
+    const/high16 v14, 0x3f800000    # 1.0f
+
+    const/high16 v15, 0x3f800000    # 1.0f
+
+    const/16 v12, 0x10
+
+    const/high16 v13, 0x3f800000    # 1.0f
+
+    invoke-static/range {v7 .. v15}, Lq2/e;->r(FFFFLjava/lang/String;IFFF)Lo0/d;
+
+    :cond_18
+    :goto_a
+    sget-object v1, LW1/b;->v:Lc2/d;
+
+    const/16 v2, 0x52
+
+    invoke-virtual {v1, v2}, Lc2/d;->e(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_19
+
+    iget-object v1, v0, Lf2/u;->F:Lq2/a;
+
+    iget v2, v0, Lq2/c;->e:I
+
+    int-to-float v2, v2
+
+    iput v2, v1, Lq2/a;->a:F
+
+    iget v2, v0, Lq2/c;->f:I
+
+    int-to-float v2, v2
+
+    iput v2, v1, Lq2/a;->b:F
+
+    iget v2, v0, Lq2/c;->i:I
+
+    int-to-float v3, v2
+
+    iput v3, v1, Lq2/a;->c:F
+
+    int-to-float v2, v2
+
+    iput v2, v1, Lq2/a;->d:F
+
+    invoke-static {v1}, Lq2/e;->i(Lq2/a;)V
+
+    iget v1, v0, Lq2/c;->i:I
+
+    int-to-float v2, v1
+
+    const/high16 v3, 0x3f000000    # 0.5f
+
+    mul-float v2, v2, v3
+
+    iget v3, v0, Lq2/c;->e:I
+
+    int-to-float v3, v3
+
+    iget v4, v0, Lq2/c;->f:I
+
+    int-to-float v4, v4
+
+    int-to-float v5, v1
+
+    const v6, 0x3ea3d70a    # 0.32f
+
+    mul-float v5, v5, v6
+
+    add-float/2addr v4, v5
+
+    int-to-float v1, v1
+
+    const-string v5, "%"
+
+    invoke-static {v2, v3, v4, v1, v5}, Lq2/e;->p(FFFFLjava/lang/String;)Lo0/d;
+
+    :cond_19
+    return-void
+.end method
+
+.method public o(II)V
+    .locals 7
+
+    invoke-super {p0, p1, p2}, Lq2/c;->o(II)V
+
+    iget-object v0, p0, Lf2/u;->F:Lq2/a;
+
+    invoke-virtual {v0, p1, p2}, Lq2/a;->c(II)Z
+
+    iget v0, p0, Lf2/u;->H:I
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lf2/u;->H:I
+
+    :cond_0
+    iget v0, p0, Lq2/c;->f:I
+
+    iget v1, p0, Lq2/c;->i:I
+
+    add-int v2, v0, v1
+
+    if-lt p2, v2, :cond_1
+
+    add-int/2addr v0, v1
+
+    iget v1, p0, Lf2/u;->G:I
+
+    add-int/2addr v0, v1
+
+    if-gt p2, v0, :cond_1
+
+    iget v0, p0, Lq2/c;->e:I
+
+    sub-int v0, p1, v0
+
+    iget v1, p0, Lq2/c;->g:I
+
+    invoke-direct {p0}, Lf2/u;->s()I
+
+    move-result v2
+
+    div-int/2addr v1, v2
+
+    div-int/2addr v0, v1
+
+    iput v0, p0, Lf2/u;->v:I
+
+    invoke-direct {p0}, Lf2/u;->s()I
+
+    move-result v1
+
+    if-lt v0, v1, :cond_1
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lf2/u;->v:I
+
+    :cond_1
+    iget v0, p0, Lf2/u;->u:I
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_2
+
+    sget-object v0, LW1/b;->s:Lc2/c;
+
+    iget-object v0, v0, Lc2/c;->b:Lc2/g;
+
+    invoke-virtual {v0}, Lc2/g;->r()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x28
+
+    cmp-long v4, v0, v2
+
+    if-ltz v4, :cond_3
+
+    iget-object v0, p0, Lf2/u;->C:Lq2/p;
+
+    invoke-virtual {v0, p1, p2}, Lq2/p;->o(II)V
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lq2/c;->f:I
+
+    iget v1, p0, Lq2/c;->i:I
+
+    add-int v2, v0, v1
+
+    iget v3, p0, Lf2/u;->G:I
+
+    add-int/2addr v2, v3
+
+    if-lt p2, v2, :cond_3
+
+    iget v2, p0, Lq2/c;->e:I
+
+    iget v4, p0, Lq2/c;->g:I
+
+    add-int v5, v2, v4
+
+    iget v6, p0, Lf2/u;->I:I
+
+    sub-int/2addr v5, v6
+
+    if-lt p1, v5, :cond_3
+
+    add-int/2addr v2, v4
+
+    if-gt p1, v2, :cond_3
+
+    sub-int/2addr p2, v0
+
+    sub-int/2addr p2, v1
+
+    sub-int/2addr p2, v3
+
+    iget p1, p0, Lf2/u;->H:I
+
+    div-int/2addr p2, p1
+
+    iput p2, p0, Lf2/u;->B:I
+
+    :cond_3
+    :goto_0
+    return-void
+.end method
+
+.method public p(II)V
+    .locals 4
+
+    invoke-super {p0, p1, p2}, Lq2/c;->p(II)V
+
+    iget p1, p0, Lf2/u;->u:I
+
+    const/4 v0, 0x3
+
+    if-ne p1, v0, :cond_0
+
+    sget-object p1, LW1/b;->s:Lc2/c;
+
+    iget-object p1, p1, Lc2/c;->b:Lc2/g;
+
+    invoke-virtual {p1}, Lc2/g;->r()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x28
+
+    cmp-long p1, v0, v2
+
+    if-ltz p1, :cond_0
+
+    iget-object p1, p0, Lf2/u;->C:Lq2/p;
+
+    invoke-virtual {p1, p2}, Lq2/p;->p(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public q(II)V
+    .locals 7
+
+    invoke-super {p0, p1, p2}, Lq2/c;->q(II)V
+
+    iget-object v0, p0, Lf2/u;->F:Lq2/a;
+
+    invoke-virtual {v0, p1, p2}, Lq2/a;->d(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, LW1/b;->v:Lc2/d;
+
+    const/16 v1, 0x52
+
+    invoke-virtual {v0, v1}, Lc2/d;->e(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, LW1/b;->t:Lf2/i;
+
+    iget-object v0, v0, Lf2/i;->C0:Lf2/c;
+
+    invoke-virtual {v0}, Lf2/c;->j()V
+
+    invoke-virtual {p0}, Lq2/c;->c()V
+
+    :cond_0
+    iget v0, p0, Lf2/u;->H:I
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lf2/u;->H:I
+
+    :cond_1
+    iget v0, p0, Lq2/c;->f:I
+
+    iget v1, p0, Lq2/c;->i:I
+
+    add-int v2, v0, v1
+
+    if-lt p2, v2, :cond_2
+
+    add-int/2addr v0, v1
+
+    iget v1, p0, Lf2/u;->G:I
+
+    add-int/2addr v0, v1
+
+    if-gt p2, v0, :cond_2
+
+    iget v0, p0, Lf2/u;->v:I
+
+    iget v1, p0, Lq2/c;->e:I
+
+    sub-int v1, p1, v1
+
+    iget v2, p0, Lq2/c;->g:I
+
+    invoke-direct {p0}, Lf2/u;->s()I
+
+    move-result v3
+
+    div-int/2addr v2, v3
+
+    div-int/2addr v1, v2
+
+    if-ne v0, v1, :cond_2
+
+    iget v0, p0, Lq2/c;->e:I
+
+    sub-int v0, p1, v0
+
+    iget v1, p0, Lq2/c;->g:I
+
+    invoke-direct {p0}, Lf2/u;->s()I
+
+    move-result v2
+
+    div-int/2addr v1, v2
+
+    div-int/2addr v0, v1
+
+    iput v0, p0, Lf2/u;->u:I
+
+    :cond_2
+    iget v0, p0, Lf2/u;->u:I
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_3
+
+    sget-object v0, LW1/b;->s:Lc2/c;
+
+    iget-object v0, v0, Lc2/c;->b:Lc2/g;
+
+    invoke-virtual {v0}, Lc2/g;->r()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x28
+
+    cmp-long v4, v0, v2
+
+    if-ltz v4, :cond_4
+
+    iget-object v0, p0, Lf2/u;->C:Lq2/p;
+
+    invoke-virtual {v0, p1, p2}, Lq2/p;->q(II)V
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lq2/c;->f:I
+
+    iget v1, p0, Lq2/c;->i:I
+
+    add-int v2, v0, v1
+
+    iget v3, p0, Lf2/u;->G:I
+
+    add-int/2addr v2, v3
+
+    if-lt p2, v2, :cond_4
+
+    iget v2, p0, Lq2/c;->e:I
+
+    iget v4, p0, Lq2/c;->g:I
+
+    add-int v5, v2, v4
+
+    iget v6, p0, Lf2/u;->I:I
+
+    sub-int/2addr v5, v6
+
+    if-lt p1, v5, :cond_4
+
+    add-int/2addr v2, v4
+
+    if-gt p1, v2, :cond_4
+
+    iget p1, p0, Lf2/u;->B:I
+
+    sub-int/2addr p2, v0
+
+    sub-int/2addr p2, v1
+
+    sub-int/2addr p2, v3
+
+    iget v0, p0, Lf2/u;->H:I
+
+    div-int/2addr p2, v0
+
+    if-ne p1, p2, :cond_4
+
+    invoke-direct {p0}, Lf2/u;->t()V
+
+    :cond_4
+    :goto_0
+    const/4 p1, 0x0
+
+    iput p1, p0, Lf2/u;->J:I
+
+    iput p1, p0, Lf2/u;->K:I
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lf2/u;->v:I
+
+    iput p1, p0, Lf2/u;->B:I
+
+    return-void
+.end method
+
+.method public r(J)V
+    .locals 2
+
+    invoke-super {p0, p1, p2}, Lq2/c;->r(J)V
+
+    iget v0, p0, Lf2/u;->B:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_4
+
+    iget v0, p0, Lf2/u;->K:I
+
+    int-to-long v0, v0
+
+    add-long/2addr v0, p1
+
+    long-to-int p1, v0
+
+    iput p1, p0, Lf2/u;->K:I
+
+    iget p2, p0, Lf2/u;->J:I
+
+    if-nez p2, :cond_0
+
+    const/16 v0, 0x258
+
+    if-ge p1, v0, :cond_3
+
+    :cond_0
+    if-lez p2, :cond_1
+
+    const/16 v0, 0x64
+
+    if-ge p1, v0, :cond_3
+
+    :cond_1
+    const/4 v0, 0x7
+
+    const/16 v1, 0x32
+
+    if-le p2, v0, :cond_2
+
+    if-ge p1, v1, :cond_3
+
+    :cond_2
+    if-le p2, v1, :cond_4
+
+    const/16 v0, 0x19
+
+    if-lt p1, v0, :cond_4
+
+    :cond_3
+    add-int/lit8 p2, p2, 0x1
+
+    iput p2, p0, Lf2/u;->J:I
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lf2/u;->K:I
+
+    invoke-direct {p0}, Lf2/u;->t()V
+
+    :cond_4
+    return-void
+.end method
+
+.method public u()V
+    .locals 2
+
+    const-wide/16 v0, 0x3
+
+    iput-wide v0, p0, Lf2/u;->D:J
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lf2/u;->E:Z
+
+    return-void
+.end method
