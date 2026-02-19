@@ -2192,31 +2192,11 @@
 
 # virtual methods
 .method public A()Z
-    .locals 5
+    .locals 1
 
-    iget-object v0, p0, Lc2/g;->a:Lb2/i;
+    const/4 v0, 0x1    # Wymuszamy wartość TRUE (aktywny)
 
-    invoke-virtual {v0}, Lb2/i;->d()J
-
-    move-result-wide v0
-
-    invoke-virtual {p0}, Lc2/g;->s()J
-
-    move-result-wide v2
-
-    cmp-long v4, v0, v2
-
-    if-ltz v4, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
+    return v0         # Zwracamy zawsze aktywny status
 .end method
 
 .method public B()Z
@@ -3309,11 +3289,11 @@
 
     move-result-wide v0
 
-    const-wide/32 v2, 0x927c0
+    const-wide/32 v2, 0x5265c00
 
     cmp-long v6, v0, v2
 
-    if-lez v6, :cond_1
+   goto :cond_1
 
     iget-object v0, p0, Lc2/g;->b:Lb2/i;
 
